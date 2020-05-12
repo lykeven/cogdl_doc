@@ -1,0 +1,537 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>models.nn package &mdash; CogDL  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="options module" href="options.html" />
+    <link rel="prev" title="models.emb package" href="models.emb.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> CogDL
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="modules.html">cogdl</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="data.html">data package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="datasets.html">datasets package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="layers.html">layers package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="models.html">models package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="models.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="models.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="models.html#module-models.base_model">models.base_model module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="models.html#module-models">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="options.html">options module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tasks.html">tasks package</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citing.html">Citing</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CogDL</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Reference</a> &raquo;</li>
+        
+          <li><a href="modules.html">cogdl</a> &raquo;</li>
+        
+          <li><a href="models.html">models package</a> &raquo;</li>
+        
+      <li>models.nn package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/reference/models.nn.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="models-nn-package">
+<h1>models.nn package<a class="headerlink" href="#models-nn-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-models.nn.gat">
+<span id="models-nn-gat-module"></span><h2>models.nn.gat module<a class="headerlink" href="#module-models.nn.gat" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="models.nn.gat.GraphAttentionLayer">
+<em class="property">class </em><code class="descclassname">models.nn.gat.</code><code class="descname">GraphAttentionLayer</code><span class="sig-paren">(</span><em>in_features</em>, <em>out_features</em>, <em>dropout</em>, <em>alpha</em>, <em>concat=True</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/nn/gat.html#GraphAttentionLayer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.nn.gat.GraphAttentionLayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Simple GAT layer, similar to <a class="reference external" href="https://arxiv.org/abs/1710.10903">https://arxiv.org/abs/1710.10903</a></p>
+<dl class="method">
+<dt id="models.nn.gat.GraphAttentionLayer.forward">
+<code class="descname">forward</code><span class="sig-paren">(</span><em>input</em>, <em>adj</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/nn/gat.html#GraphAttentionLayer.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.nn.gat.GraphAttentionLayer.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="models.nn.gat.PetarVGAT">
+<em class="property">class </em><code class="descclassname">models.nn.gat.</code><code class="descname">PetarVGAT</code><span class="sig-paren">(</span><em>nfeat</em>, <em>nhid</em>, <em>nclass</em>, <em>dropout</em>, <em>alpha</em>, <em>nheads</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/nn/gat.html#PetarVGAT"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.nn.gat.PetarVGAT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="models.html#models.base_model.BaseModel" title="models.base_model.BaseModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">models.base_model.BaseModel</span></code></a></p>
+<dl class="staticmethod">
+<dt id="models.nn.gat.PetarVGAT.add_args">
+<em class="property">static </em><code class="descname">add_args</code><span class="sig-paren">(</span><em>parser</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/nn/gat.html#PetarVGAT.add_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.nn.gat.PetarVGAT.add_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add model-specific arguments to the parser.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="models.nn.gat.PetarVGAT.build_model_from_args">
+<em class="property">classmethod </em><code class="descname">build_model_from_args</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/nn/gat.html#PetarVGAT.build_model_from_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.nn.gat.PetarVGAT.build_model_from_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build a new model instance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="models.nn.gat.PetarVGAT.forward">
+<code class="descname">forward</code><span class="sig-paren">(</span><em>x</em>, <em>adj</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/nn/gat.html#PetarVGAT.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.nn.gat.PetarVGAT.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="models.nn.gat.PetarVSpGAT">
+<em class="property">class </em><code class="descclassname">models.nn.gat.</code><code class="descname">PetarVSpGAT</code><span class="sig-paren">(</span><em>nfeat</em>, <em>nhid</em>, <em>nclass</em>, <em>dropout</em>, <em>alpha</em>, <em>nheads</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/nn/gat.html#PetarVSpGAT"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.nn.gat.PetarVSpGAT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#models.nn.gat.PetarVGAT" title="models.nn.gat.PetarVGAT"><code class="xref py py-class docutils literal notranslate"><span class="pre">models.nn.gat.PetarVGAT</span></code></a></p>
+<dl class="method">
+<dt id="models.nn.gat.PetarVSpGAT.forward">
+<code class="descname">forward</code><span class="sig-paren">(</span><em>x</em>, <em>adj</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/nn/gat.html#PetarVSpGAT.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.nn.gat.PetarVSpGAT.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="models.nn.gat.SpGraphAttentionLayer">
+<em class="property">class </em><code class="descclassname">models.nn.gat.</code><code class="descname">SpGraphAttentionLayer</code><span class="sig-paren">(</span><em>in_features</em>, <em>out_features</em>, <em>dropout</em>, <em>alpha</em>, <em>concat=True</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/nn/gat.html#SpGraphAttentionLayer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.nn.gat.SpGraphAttentionLayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Sparse version GAT layer, similar to <a class="reference external" href="https://arxiv.org/abs/1710.10903">https://arxiv.org/abs/1710.10903</a></p>
+<dl class="method">
+<dt id="models.nn.gat.SpGraphAttentionLayer.forward">
+<code class="descname">forward</code><span class="sig-paren">(</span><em>input</em>, <em>edge</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/nn/gat.html#SpGraphAttentionLayer.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.nn.gat.SpGraphAttentionLayer.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="models.nn.gat.SpecialSpmm">
+<em class="property">class </em><code class="descclassname">models.nn.gat.</code><code class="descname">SpecialSpmm</code><a class="reference internal" href="../_modules/models/nn/gat.html#SpecialSpmm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.nn.gat.SpecialSpmm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="models.nn.gat.SpecialSpmm.forward">
+<code class="descname">forward</code><span class="sig-paren">(</span><em>indices</em>, <em>values</em>, <em>shape</em>, <em>b</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/nn/gat.html#SpecialSpmm.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.nn.gat.SpecialSpmm.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="models.nn.gat.SpecialSpmmFunction">
+<em class="property">class </em><code class="descclassname">models.nn.gat.</code><code class="descname">SpecialSpmmFunction</code><a class="reference internal" href="../_modules/models/nn/gat.html#SpecialSpmmFunction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.nn.gat.SpecialSpmmFunction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.autograd.function.Function</span></code></p>
+<p>Special function for only sparse region backpropataion layer.</p>
+<dl class="staticmethod">
+<dt id="models.nn.gat.SpecialSpmmFunction.backward">
+<em class="property">static </em><code class="descname">backward</code><span class="sig-paren">(</span><em>ctx</em>, <em>grad_output</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/nn/gat.html#SpecialSpmmFunction.backward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.nn.gat.SpecialSpmmFunction.backward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines a formula for differentiating the operation.</p>
+<p>This function is to be overridden by all subclasses.</p>
+<p>It must accept a context <code class="xref py py-attr docutils literal notranslate"><span class="pre">ctx</span></code> as the first argument, followed by
+as many outputs did <a class="reference internal" href="#models.nn.gat.SpecialSpmmFunction.forward" title="models.nn.gat.SpecialSpmmFunction.forward"><code class="xref py py-func docutils literal notranslate"><span class="pre">forward()</span></code></a> return, and it should return as many
+tensors, as there were inputs to <a class="reference internal" href="#models.nn.gat.SpecialSpmmFunction.forward" title="models.nn.gat.SpecialSpmmFunction.forward"><code class="xref py py-func docutils literal notranslate"><span class="pre">forward()</span></code></a>. Each argument is the
+gradient w.r.t the given output, and each returned value should be the
+gradient w.r.t. the corresponding input.</p>
+<p>The context can be used to retrieve tensors saved during the forward
+pass. It also has an attribute <code class="xref py py-attr docutils literal notranslate"><span class="pre">ctx.needs_input_grad</span></code> as a tuple
+of booleans representing whether each input needs gradient. E.g.,
+<a class="reference internal" href="#models.nn.gat.SpecialSpmmFunction.backward" title="models.nn.gat.SpecialSpmmFunction.backward"><code class="xref py py-func docutils literal notranslate"><span class="pre">backward()</span></code></a> will have <code class="docutils literal notranslate"><span class="pre">ctx.needs_input_grad[0]</span> <span class="pre">=</span> <span class="pre">True</span></code> if the
+first input to <a class="reference internal" href="#models.nn.gat.SpecialSpmmFunction.forward" title="models.nn.gat.SpecialSpmmFunction.forward"><code class="xref py py-func docutils literal notranslate"><span class="pre">forward()</span></code></a> needs gradient computated w.r.t. the
+output.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="models.nn.gat.SpecialSpmmFunction.forward">
+<em class="property">static </em><code class="descname">forward</code><span class="sig-paren">(</span><em>ctx</em>, <em>indices</em>, <em>values</em>, <em>shape</em>, <em>b</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/nn/gat.html#SpecialSpmmFunction.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.nn.gat.SpecialSpmmFunction.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs the operation.</p>
+<p>This function is to be overridden by all subclasses.</p>
+<p>It must accept a context ctx as the first argument, followed by any
+number of arguments (tensors or other types).</p>
+<p>The context can be used to store tensors that can be then retrieved
+during the backward pass.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-models.nn.gcn">
+<span id="models-nn-gcn-module"></span><h2>models.nn.gcn module<a class="headerlink" href="#module-models.nn.gcn" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="models.nn.gcn.GraphConvolution">
+<em class="property">class </em><code class="descclassname">models.nn.gcn.</code><code class="descname">GraphConvolution</code><span class="sig-paren">(</span><em>in_features</em>, <em>out_features</em>, <em>bias=True</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/nn/gcn.html#GraphConvolution"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.nn.gcn.GraphConvolution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Simple GCN layer, similar to <a class="reference external" href="https://arxiv.org/abs/1609.02907">https://arxiv.org/abs/1609.02907</a></p>
+<dl class="method">
+<dt id="models.nn.gcn.GraphConvolution.forward">
+<code class="descname">forward</code><span class="sig-paren">(</span><em>input</em>, <em>edge_index</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/nn/gcn.html#GraphConvolution.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.nn.gcn.GraphConvolution.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="models.nn.gcn.GraphConvolution.reset_parameters">
+<code class="descname">reset_parameters</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/nn/gcn.html#GraphConvolution.reset_parameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.nn.gcn.GraphConvolution.reset_parameters" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="models.nn.gcn.TKipfGCN">
+<em class="property">class </em><code class="descclassname">models.nn.gcn.</code><code class="descname">TKipfGCN</code><span class="sig-paren">(</span><em>nfeat</em>, <em>nhid</em>, <em>nclass</em>, <em>dropout</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/nn/gcn.html#TKipfGCN"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.nn.gcn.TKipfGCN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="models.html#models.base_model.BaseModel" title="models.base_model.BaseModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">models.base_model.BaseModel</span></code></a></p>
+<dl class="staticmethod">
+<dt id="models.nn.gcn.TKipfGCN.add_args">
+<em class="property">static </em><code class="descname">add_args</code><span class="sig-paren">(</span><em>parser</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/nn/gcn.html#TKipfGCN.add_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.nn.gcn.TKipfGCN.add_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add model-specific arguments to the parser.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="models.nn.gcn.TKipfGCN.build_model_from_args">
+<em class="property">classmethod </em><code class="descname">build_model_from_args</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/nn/gcn.html#TKipfGCN.build_model_from_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.nn.gcn.TKipfGCN.build_model_from_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build a new model instance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="models.nn.gcn.TKipfGCN.forward">
+<code class="descname">forward</code><span class="sig-paren">(</span><em>x</em>, <em>adj</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/nn/gcn.html#TKipfGCN.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.nn.gcn.TKipfGCN.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-models.nn.graphsage">
+<span id="models-nn-graphsage-module"></span><h2>models.nn.graphsage module<a class="headerlink" href="#module-models.nn.graphsage" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="models.nn.graphsage.Graphsage">
+<em class="property">class </em><code class="descclassname">models.nn.graphsage.</code><code class="descname">Graphsage</code><span class="sig-paren">(</span><em>num_features</em>, <em>num_classes</em>, <em>hidden_size</em>, <em>num_layers</em>, <em>sample_size</em>, <em>dropout</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/nn/graphsage.html#Graphsage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.nn.graphsage.Graphsage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="models.html#models.base_model.BaseModel" title="models.base_model.BaseModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">models.base_model.BaseModel</span></code></a></p>
+<dl class="staticmethod">
+<dt id="models.nn.graphsage.Graphsage.add_args">
+<em class="property">static </em><code class="descname">add_args</code><span class="sig-paren">(</span><em>parser</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/nn/graphsage.html#Graphsage.add_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.nn.graphsage.Graphsage.add_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add model-specific arguments to the parser.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="models.nn.graphsage.Graphsage.build_model_from_args">
+<em class="property">classmethod </em><code class="descname">build_model_from_args</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/nn/graphsage.html#Graphsage.build_model_from_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.nn.graphsage.Graphsage.build_model_from_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build a new model instance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="models.nn.graphsage.Graphsage.forward">
+<code class="descname">forward</code><span class="sig-paren">(</span><em>x</em>, <em>edge_index</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/nn/graphsage.html#Graphsage.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.nn.graphsage.Graphsage.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="models.nn.graphsage.Graphsage.sampler">
+<code class="descname">sampler</code><span class="sig-paren">(</span><em>edge_index</em>, <em>num_sample</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/nn/graphsage.html#Graphsage.sampler"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.nn.graphsage.Graphsage.sampler" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-models.nn.mlp">
+<span id="models-nn-mlp-module"></span><h2>models.nn.mlp module<a class="headerlink" href="#module-models.nn.mlp" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="models.nn.mlp.MLP">
+<em class="property">class </em><code class="descclassname">models.nn.mlp.</code><code class="descname">MLP</code><span class="sig-paren">(</span><em>num_features</em>, <em>num_classes</em>, <em>hidden_size</em>, <em>num_layers</em>, <em>dropout</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/nn/mlp.html#MLP"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.nn.mlp.MLP" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="models.html#models.base_model.BaseModel" title="models.base_model.BaseModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">models.base_model.BaseModel</span></code></a></p>
+<dl class="staticmethod">
+<dt id="models.nn.mlp.MLP.add_args">
+<em class="property">static </em><code class="descname">add_args</code><span class="sig-paren">(</span><em>parser</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/nn/mlp.html#MLP.add_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.nn.mlp.MLP.add_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add model-specific arguments to the parser.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="models.nn.mlp.MLP.build_model_from_args">
+<em class="property">classmethod </em><code class="descname">build_model_from_args</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/nn/mlp.html#MLP.build_model_from_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.nn.mlp.MLP.build_model_from_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build a new model instance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="models.nn.mlp.MLP.forward">
+<code class="descname">forward</code><span class="sig-paren">(</span><em>x</em>, <em>edge_index</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/nn/mlp.html#MLP.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.nn.mlp.MLP.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="models-nn-pyg-drgat-module">
+<h2>models.nn.pyg_drgat module<a class="headerlink" href="#models-nn-pyg-drgat-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="models-nn-pyg-drgcn-module">
+<h2>models.nn.pyg_drgcn module<a class="headerlink" href="#models-nn-pyg-drgcn-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="models-nn-pyg-gat-module">
+<h2>models.nn.pyg_gat module<a class="headerlink" href="#models-nn-pyg-gat-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="models-nn-pyg-gcn-module">
+<h2>models.nn.pyg_gcn module<a class="headerlink" href="#models-nn-pyg-gcn-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-models.nn">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-models.nn" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="options.html" class="btn btn-neutral float-right" title="options module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="models.emb.html" class="btn btn-neutral float-left" title="models.emb package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, KEG
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

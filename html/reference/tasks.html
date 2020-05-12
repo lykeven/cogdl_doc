@@ -1,0 +1,470 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>tasks package &mdash; CogDL  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="License" href="../license.html" />
+    <link rel="prev" title="options module" href="options.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> CogDL
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="modules.html">cogdl</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="data.html">data package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="datasets.html">datasets package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="layers.html">layers package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.html">models package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="options.html">options module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">tasks package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-tasks.base_task">tasks.base_task module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-tasks.community_detection">tasks.community_detection module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-tasks.influence_maximization">tasks.influence_maximization module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-tasks.link_prediction">tasks.link_prediction module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-tasks.multiplex_link_prediction">tasks.multiplex_link_prediction module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-tasks.node_classification">tasks.node_classification module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-tasks.unsupervised_node_classification">tasks.unsupervised_node_classification module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-tasks">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citing.html">Citing</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CogDL</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Reference</a> &raquo;</li>
+        
+          <li><a href="modules.html">cogdl</a> &raquo;</li>
+        
+      <li>tasks package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/reference/tasks.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tasks-package">
+<h1>tasks package<a class="headerlink" href="#tasks-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-tasks.base_task">
+<span id="tasks-base-task-module"></span><h2>tasks.base_task module<a class="headerlink" href="#module-tasks.base_task" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="tasks.base_task.BaseTask">
+<em class="property">class </em><code class="descclassname">tasks.base_task.</code><code class="descname">BaseTask</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks/base_task.html#BaseTask"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tasks.base_task.BaseTask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="staticmethod">
+<dt id="tasks.base_task.BaseTask.add_args">
+<em class="property">static </em><code class="descname">add_args</code><span class="sig-paren">(</span><em>parser</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks/base_task.html#BaseTask.add_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tasks.base_task.BaseTask.add_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add task-specific arguments to the parser.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tasks.base_task.BaseTask.train">
+<code class="descname">train</code><span class="sig-paren">(</span><em>num_epoch</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks/base_task.html#BaseTask.train"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tasks.base_task.BaseTask.train" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-tasks.community_detection">
+<span id="tasks-community-detection-module"></span><h2>tasks.community_detection module<a class="headerlink" href="#module-tasks.community_detection" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="tasks.community_detection.CommunityDetection">
+<em class="property">class </em><code class="descclassname">tasks.community_detection.</code><code class="descname">CommunityDetection</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks/community_detection.html#CommunityDetection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tasks.community_detection.CommunityDetection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tasks.base_task.BaseTask" title="tasks.base_task.BaseTask"><code class="xref py py-class docutils literal notranslate"><span class="pre">tasks.base_task.BaseTask</span></code></a></p>
+<p>Node classification task.</p>
+<dl class="staticmethod">
+<dt id="tasks.community_detection.CommunityDetection.add_args">
+<em class="property">static </em><code class="descname">add_args</code><span class="sig-paren">(</span><em>parser</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks/community_detection.html#CommunityDetection.add_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tasks.community_detection.CommunityDetection.add_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add task-specific arguments to the parser.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tasks.community_detection.CommunityDetection.train">
+<code class="descname">train</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks/community_detection.html#CommunityDetection.train"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tasks.community_detection.CommunityDetection.train" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-tasks.influence_maximization">
+<span id="tasks-influence-maximization-module"></span><h2>tasks.influence_maximization module<a class="headerlink" href="#module-tasks.influence_maximization" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="tasks.influence_maximization.InfluenceMaximization">
+<em class="property">class </em><code class="descclassname">tasks.influence_maximization.</code><code class="descname">InfluenceMaximization</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks/influence_maximization.html#InfluenceMaximization"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tasks.influence_maximization.InfluenceMaximization" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tasks.base_task.BaseTask" title="tasks.base_task.BaseTask"><code class="xref py py-class docutils literal notranslate"><span class="pre">tasks.base_task.BaseTask</span></code></a></p>
+<p>Node classification task.</p>
+<dl class="staticmethod">
+<dt id="tasks.influence_maximization.InfluenceMaximization.add_args">
+<em class="property">static </em><code class="descname">add_args</code><span class="sig-paren">(</span><em>parser</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks/influence_maximization.html#InfluenceMaximization.add_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tasks.influence_maximization.InfluenceMaximization.add_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add task-specific arguments to the parser.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tasks.influence_maximization.InfluenceMaximization.train">
+<code class="descname">train</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks/influence_maximization.html#InfluenceMaximization.train"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tasks.influence_maximization.InfluenceMaximization.train" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-tasks.link_prediction">
+<span id="tasks-link-prediction-module"></span><h2>tasks.link_prediction module<a class="headerlink" href="#module-tasks.link_prediction" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="tasks.link_prediction.LinkPrediction">
+<em class="property">class </em><code class="descclassname">tasks.link_prediction.</code><code class="descname">LinkPrediction</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks/link_prediction.html#LinkPrediction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tasks.link_prediction.LinkPrediction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tasks.base_task.BaseTask" title="tasks.base_task.BaseTask"><code class="xref py py-class docutils literal notranslate"><span class="pre">tasks.base_task.BaseTask</span></code></a></p>
+<dl class="staticmethod">
+<dt id="tasks.link_prediction.LinkPrediction.add_args">
+<em class="property">static </em><code class="descname">add_args</code><span class="sig-paren">(</span><em>parser</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks/link_prediction.html#LinkPrediction.add_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tasks.link_prediction.LinkPrediction.add_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add task-specific arguments to the parser.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tasks.link_prediction.LinkPrediction.train">
+<code class="descname">train</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks/link_prediction.html#LinkPrediction.train"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tasks.link_prediction.LinkPrediction.train" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="tasks.link_prediction.divide_data">
+<code class="descclassname">tasks.link_prediction.</code><code class="descname">divide_data</code><span class="sig-paren">(</span><em>input_list</em>, <em>division_rate</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks/link_prediction.html#divide_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tasks.link_prediction.divide_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tasks.link_prediction.evaluate">
+<code class="descclassname">tasks.link_prediction.</code><code class="descname">evaluate</code><span class="sig-paren">(</span><em>embs</em>, <em>true_edges</em>, <em>false_edges</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks/link_prediction.html#evaluate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tasks.link_prediction.evaluate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tasks.link_prediction.gen_node_pairs">
+<code class="descclassname">tasks.link_prediction.</code><code class="descname">gen_node_pairs</code><span class="sig-paren">(</span><em>train_data</em>, <em>valid_data</em>, <em>test_data</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks/link_prediction.html#gen_node_pairs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tasks.link_prediction.gen_node_pairs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tasks.link_prediction.get_score">
+<code class="descclassname">tasks.link_prediction.</code><code class="descname">get_score</code><span class="sig-paren">(</span><em>embs</em>, <em>node1</em>, <em>node2</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks/link_prediction.html#get_score"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tasks.link_prediction.get_score" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tasks.link_prediction.randomly_choose_false_edges">
+<code class="descclassname">tasks.link_prediction.</code><code class="descname">randomly_choose_false_edges</code><span class="sig-paren">(</span><em>nodes</em>, <em>true_edges</em>, <em>num</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks/link_prediction.html#randomly_choose_false_edges"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tasks.link_prediction.randomly_choose_false_edges" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-tasks.multiplex_link_prediction">
+<span id="tasks-multiplex-link-prediction-module"></span><h2>tasks.multiplex_link_prediction module<a class="headerlink" href="#module-tasks.multiplex_link_prediction" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="tasks.multiplex_link_prediction.MultiplexLinkPrediction">
+<em class="property">class </em><code class="descclassname">tasks.multiplex_link_prediction.</code><code class="descname">MultiplexLinkPrediction</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks/multiplex_link_prediction.html#MultiplexLinkPrediction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tasks.multiplex_link_prediction.MultiplexLinkPrediction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tasks.base_task.BaseTask" title="tasks.base_task.BaseTask"><code class="xref py py-class docutils literal notranslate"><span class="pre">tasks.base_task.BaseTask</span></code></a></p>
+<dl class="staticmethod">
+<dt id="tasks.multiplex_link_prediction.MultiplexLinkPrediction.add_args">
+<em class="property">static </em><code class="descname">add_args</code><span class="sig-paren">(</span><em>parser</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks/multiplex_link_prediction.html#MultiplexLinkPrediction.add_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tasks.multiplex_link_prediction.MultiplexLinkPrediction.add_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add task-specific arguments to the parser.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tasks.multiplex_link_prediction.MultiplexLinkPrediction.train">
+<code class="descname">train</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks/multiplex_link_prediction.html#MultiplexLinkPrediction.train"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tasks.multiplex_link_prediction.MultiplexLinkPrediction.train" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="tasks.multiplex_link_prediction.evaluate">
+<code class="descclassname">tasks.multiplex_link_prediction.</code><code class="descname">evaluate</code><span class="sig-paren">(</span><em>embs</em>, <em>true_edges</em>, <em>false_edges</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks/multiplex_link_prediction.html#evaluate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tasks.multiplex_link_prediction.evaluate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tasks.multiplex_link_prediction.get_score">
+<code class="descclassname">tasks.multiplex_link_prediction.</code><code class="descname">get_score</code><span class="sig-paren">(</span><em>embs</em>, <em>node1</em>, <em>node2</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks/multiplex_link_prediction.html#get_score"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tasks.multiplex_link_prediction.get_score" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-tasks.node_classification">
+<span id="tasks-node-classification-module"></span><h2>tasks.node_classification module<a class="headerlink" href="#module-tasks.node_classification" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="tasks.node_classification.NodeClassification">
+<em class="property">class </em><code class="descclassname">tasks.node_classification.</code><code class="descname">NodeClassification</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks/node_classification.html#NodeClassification"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tasks.node_classification.NodeClassification" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tasks.base_task.BaseTask" title="tasks.base_task.BaseTask"><code class="xref py py-class docutils literal notranslate"><span class="pre">tasks.base_task.BaseTask</span></code></a></p>
+<p>Node classification task.</p>
+<dl class="staticmethod">
+<dt id="tasks.node_classification.NodeClassification.add_args">
+<em class="property">static </em><code class="descname">add_args</code><span class="sig-paren">(</span><em>parser</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks/node_classification.html#NodeClassification.add_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tasks.node_classification.NodeClassification.add_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add task-specific arguments to the parser.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tasks.node_classification.NodeClassification.train">
+<code class="descname">train</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks/node_classification.html#NodeClassification.train"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tasks.node_classification.NodeClassification.train" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-tasks.unsupervised_node_classification">
+<span id="tasks-unsupervised-node-classification-module"></span><h2>tasks.unsupervised_node_classification module<a class="headerlink" href="#module-tasks.unsupervised_node_classification" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="tasks.unsupervised_node_classification.TopKRanker">
+<em class="property">class </em><code class="descclassname">tasks.unsupervised_node_classification.</code><code class="descname">TopKRanker</code><span class="sig-paren">(</span><em>estimator</em>, <em>n_jobs=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks/unsupervised_node_classification.html#TopKRanker"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tasks.unsupervised_node_classification.TopKRanker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sklearn.multiclass.OneVsRestClassifier</span></code></p>
+<dl class="method">
+<dt id="tasks.unsupervised_node_classification.TopKRanker.predict">
+<code class="descname">predict</code><span class="sig-paren">(</span><em>X</em>, <em>top_k_list</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks/unsupervised_node_classification.html#TopKRanker.predict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tasks.unsupervised_node_classification.TopKRanker.predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Predict multi-class targets using underlying estimators.</p>
+<dl class="docutils">
+<dt>X <span class="classifier-delimiter">:</span> <span class="classifier">(sparse) array-like, shape = [n_samples, n_features]</span></dt>
+<dd>Data.</dd>
+</dl>
+<dl class="docutils">
+<dt>y <span class="classifier-delimiter">:</span> <span class="classifier">(sparse) array-like, shape = [n_samples, ], [n_samples, n_classes].</span></dt>
+<dd>Predicted multi-class targets.</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tasks.unsupervised_node_classification.UnsupervisedNodeClassification">
+<em class="property">class </em><code class="descclassname">tasks.unsupervised_node_classification.</code><code class="descname">UnsupervisedNodeClassification</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks/unsupervised_node_classification.html#UnsupervisedNodeClassification"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tasks.unsupervised_node_classification.UnsupervisedNodeClassification" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tasks.base_task.BaseTask" title="tasks.base_task.BaseTask"><code class="xref py py-class docutils literal notranslate"><span class="pre">tasks.base_task.BaseTask</span></code></a></p>
+<p>Node classification task.</p>
+<dl class="staticmethod">
+<dt id="tasks.unsupervised_node_classification.UnsupervisedNodeClassification.add_args">
+<em class="property">static </em><code class="descname">add_args</code><span class="sig-paren">(</span><em>parser</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks/unsupervised_node_classification.html#UnsupervisedNodeClassification.add_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tasks.unsupervised_node_classification.UnsupervisedNodeClassification.add_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add task-specific arguments to the parser.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tasks.unsupervised_node_classification.UnsupervisedNodeClassification.enhance_emb">
+<code class="descname">enhance_emb</code><span class="sig-paren">(</span><em>G</em>, <em>embs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks/unsupervised_node_classification.html#UnsupervisedNodeClassification.enhance_emb"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tasks.unsupervised_node_classification.UnsupervisedNodeClassification.enhance_emb" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tasks.unsupervised_node_classification.UnsupervisedNodeClassification.save_emb">
+<code class="descname">save_emb</code><span class="sig-paren">(</span><em>embs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks/unsupervised_node_classification.html#UnsupervisedNodeClassification.save_emb"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tasks.unsupervised_node_classification.UnsupervisedNodeClassification.save_emb" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tasks.unsupervised_node_classification.UnsupervisedNodeClassification.train">
+<code class="descname">train</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks/unsupervised_node_classification.html#UnsupervisedNodeClassification.train"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tasks.unsupervised_node_classification.UnsupervisedNodeClassification.train" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-tasks">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-tasks" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="tasks.build_task">
+<code class="descclassname">tasks.</code><code class="descname">build_task</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks.html#build_task"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tasks.build_task" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="tasks.register_task">
+<code class="descclassname">tasks.</code><code class="descname">register_task</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/tasks.html#register_task"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tasks.register_task" title="Permalink to this definition">¶</a></dt>
+<dd><p>New task types can be added to cogdl with the <a class="reference internal" href="#tasks.register_task" title="tasks.register_task"><code class="xref py py-func docutils literal notranslate"><span class="pre">register_task()</span></code></a>
+function decorator.</p>
+<p>For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@register_task</span><span class="p">(</span><span class="s1">&#39;node_classification&#39;</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">NodeClassification</span><span class="p">(</span><span class="n">BaseTask</span><span class="p">):</span>
+    <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>name (str): the name of the task</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../license.html" class="btn btn-neutral float-right" title="License" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="options.html" class="btn btn-neutral float-left" title="options module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, KEG
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

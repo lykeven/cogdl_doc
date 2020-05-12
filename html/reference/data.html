@@ -1,0 +1,1146 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>data package &mdash; CogDL  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="datasets package" href="datasets.html" />
+    <link rel="prev" title="cogdl" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> CogDL
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="modules.html">cogdl</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">data package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-data.batch">data.batch module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-data.data">data.data module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-data.dataloader">data.dataloader module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-data.dataset">data.dataset module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-data.download">data.download module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-data.extract">data.extract module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-data.in_memory_dataset">data.in_memory_dataset module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-data.makedirs">data.makedirs module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-data">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="datasets.html">datasets package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="layers.html">layers package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.html">models package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="options.html">options module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tasks.html">tasks package</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citing.html">Citing</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CogDL</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Reference</a> &raquo;</li>
+        
+          <li><a href="modules.html">cogdl</a> &raquo;</li>
+        
+      <li>data package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/reference/data.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="data-package">
+<h1>data package<a class="headerlink" href="#data-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-data.batch">
+<span id="data-batch-module"></span><h2>data.batch module<a class="headerlink" href="#module-data.batch" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="data.batch.Batch">
+<em class="property">class </em><code class="descclassname">data.batch.</code><code class="descname">Batch</code><span class="sig-paren">(</span><em>batch=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/batch.html#Batch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.batch.Batch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">cogdl.data.data.Data</span></code></p>
+<p>A plain old python object modeling a batch of graphs as one big
+(dicconnected) graph. With <code class="xref py py-class docutils literal notranslate"><span class="pre">cogdl.data.Data</span></code> being the
+base class, all its methods can also be used here.
+In addition, single graphs can be reconstructed via the assignment vector
+<code class="xref py py-obj docutils literal notranslate"><span class="pre">batch</span></code>, which maps each node to its respective graph identifier.</p>
+<dl class="method">
+<dt id="data.batch.Batch.cumsum">
+<code class="descname">cumsum</code><span class="sig-paren">(</span><em>key</em>, <em>item</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/batch.html#Batch.cumsum"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.batch.Batch.cumsum" title="Permalink to this definition">¶</a></dt>
+<dd><p>If <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>, the attribute <code class="xref py py-obj docutils literal notranslate"><span class="pre">key</span></code> with content <code class="xref py py-obj docutils literal notranslate"><span class="pre">item</span></code>
+should be added up cumulatively before concatenated together.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is for internal use only, and should only be overridden
+if the batch concatenation process is corrupted for a specific data
+attribute.</p>
+</div>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="data.batch.Batch.from_data_list">
+<em class="property">static </em><code class="descname">from_data_list</code><span class="sig-paren">(</span><em>data_list</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/batch.html#Batch.from_data_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.batch.Batch.from_data_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs a batch object from a python list holding
+<code class="xref py py-class docutils literal notranslate"><span class="pre">cogdl.data.Data</span></code> objects.
+The assignment vector <code class="xref py py-obj docutils literal notranslate"><span class="pre">batch</span></code> is created on the fly.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.batch.Batch.num_graphs">
+<code class="descname">num_graphs</code><a class="headerlink" href="#data.batch.Batch.num_graphs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of graphs in the batch.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-data.data">
+<span id="data-data-module"></span><h2>data.data module<a class="headerlink" href="#module-data.data" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="data.data.Data">
+<em class="property">class </em><code class="descclassname">data.data.</code><code class="descname">Data</code><span class="sig-paren">(</span><em>x=None</em>, <em>edge_index=None</em>, <em>edge_attr=None</em>, <em>y=None</em>, <em>pos=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/data.html#Data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.data.Data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>A plain old python object modeling a single graph with various
+(optional) attributes:</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd><dl class="first last docutils">
+<dt>x (Tensor, optional): Node feature matrix with shape :obj:<a href="#id1"><span class="problematic" id="id2">`</span></a>[num_nodes,</dt>
+<dd>num_node_features]`. (default: <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>)</dd>
+<dt>edge_index (LongTensor, optional): Graph connectivity in COO format</dt>
+<dd>with shape <code class="xref py py-obj docutils literal notranslate"><span class="pre">[2,</span> <span class="pre">num_edges]</span></code>. (default: <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>)</dd>
+<dt>edge_attr (Tensor, optional): Edge feature matrix with shape</dt>
+<dd><code class="xref py py-obj docutils literal notranslate"><span class="pre">[num_edges,</span> <span class="pre">num_edge_features]</span></code>. (default: <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>)</dd>
+<dt>y (Tensor, optional): Graph or node targets with arbitrary shape.</dt>
+<dd>(default: <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>)</dd>
+<dt>pos (Tensor, optional): Node position matrix with shape</dt>
+<dd><code class="xref py py-obj docutils literal notranslate"><span class="pre">[num_nodes,</span> <span class="pre">num_dimensions]</span></code>. (default: <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>)</dd>
+</dl>
+</dd>
+</dl>
+<p>The data object is not restricted to these attributes and can be extented
+by any other additional data.</p>
+<dl class="method">
+<dt id="data.data.Data.apply">
+<code class="descname">apply</code><span class="sig-paren">(</span><em>func</em>, <em>*keys</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/data.html#Data.apply"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.data.Data.apply" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the function <code class="xref py py-obj docutils literal notranslate"><span class="pre">func</span></code> to all attributes <code class="xref py py-obj docutils literal notranslate"><span class="pre">*keys</span></code>.
+If <code class="xref py py-obj docutils literal notranslate"><span class="pre">*keys</span></code> is not given, <code class="xref py py-obj docutils literal notranslate"><span class="pre">func</span></code> is applied to all present
+attributes.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.data.Data.cat_dim">
+<code class="descname">cat_dim</code><span class="sig-paren">(</span><em>key</em>, <em>value</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/data.html#Data.cat_dim"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.data.Data.cat_dim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the dimension in which the attribute <code class="xref py py-obj docutils literal notranslate"><span class="pre">key</span></code> with
+content <code class="xref py py-obj docutils literal notranslate"><span class="pre">value</span></code> gets concatenated when creating batches.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is for internal use only, and should only be overridden
+if the batch concatenation process is corrupted for a specific data
+attribute.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.data.Data.clone">
+<code class="descname">clone</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/data.html#Data.clone"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.data.Data.clone" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="data.data.Data.contiguous">
+<code class="descname">contiguous</code><span class="sig-paren">(</span><em>*keys</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/data.html#Data.contiguous"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.data.Data.contiguous" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ensures a contiguous memory layout for all attributes <code class="xref py py-obj docutils literal notranslate"><span class="pre">*keys</span></code>.
+If <code class="xref py py-obj docutils literal notranslate"><span class="pre">*keys</span></code> is not given, all present attributes are ensured to
+have a contiguous memory layout.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.data.Data.cuda">
+<code class="descname">cuda</code><span class="sig-paren">(</span><em>*keys</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/data.html#Data.cuda"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.data.Data.cuda" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="staticmethod">
+<dt id="data.data.Data.from_dict">
+<em class="property">static </em><code class="descname">from_dict</code><span class="sig-paren">(</span><em>dictionary</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/data.html#Data.from_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.data.Data.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a data object from a python dictionary.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.data.Data.is_coalesced">
+<code class="descname">is_coalesced</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/data.html#Data.is_coalesced"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.data.Data.is_coalesced" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>, if edge indices are ordered and do not contain
+duplicate entries.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.data.Data.keys">
+<code class="descname">keys</code><a class="headerlink" href="#data.data.Data.keys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns all names of graph attributes.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.data.Data.num_edges">
+<code class="descname">num_edges</code><a class="headerlink" href="#data.data.Data.num_edges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of edges in the graph.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.data.Data.num_features">
+<code class="descname">num_features</code><a class="headerlink" href="#data.data.Data.num_features" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of features per node in the graph.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.data.Data.to">
+<code class="descname">to</code><span class="sig-paren">(</span><em>device</em>, <em>*keys</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/data.html#Data.to"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.data.Data.to" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs tensor dtype and/or device conversion to all attributes
+<code class="xref py py-obj docutils literal notranslate"><span class="pre">*keys</span></code>.
+If <code class="xref py py-obj docutils literal notranslate"><span class="pre">*keys</span></code> is not given, the conversion is applied to all present
+attributes.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-data.dataloader">
+<span id="data-dataloader-module"></span><h2>data.dataloader module<a class="headerlink" href="#module-data.dataloader" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="data.dataloader.DataListLoader">
+<em class="property">class </em><code class="descclassname">data.dataloader.</code><code class="descname">DataListLoader</code><span class="sig-paren">(</span><em>dataset</em>, <em>batch_size=1</em>, <em>shuffle=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/dataloader.html#DataListLoader"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.dataloader.DataListLoader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.utils.data.dataloader.DataLoader</span></code></p>
+<p>Data loader which merges data objects from a
+<code class="xref py py-class docutils literal notranslate"><span class="pre">cogdl.data.dataset</span></code> to a python list.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This data loader should be used for multi-gpu support via
+<code class="xref py py-class docutils literal notranslate"><span class="pre">cogdl.nn.DataParallel</span></code>.</p>
+</div>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd><p class="first">dataset (Dataset): The dataset from which to load the data.
+batch_size (int, optional): How may samples per batch to load.</p>
+<blockquote>
+<div>(default: <code class="xref py py-obj docutils literal notranslate"><span class="pre">1</span></code>)</div></blockquote>
+<dl class="last docutils">
+<dt>shuffle (bool, optional): If set to <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>, the data will be</dt>
+<dd>reshuffled at every epoch (default: <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>)</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="data.dataloader.DataLoader">
+<em class="property">class </em><code class="descclassname">data.dataloader.</code><code class="descname">DataLoader</code><span class="sig-paren">(</span><em>dataset</em>, <em>batch_size=1</em>, <em>shuffle=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/dataloader.html#DataLoader"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.dataloader.DataLoader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.utils.data.dataloader.DataLoader</span></code></p>
+<p>Data loader which merges data objects from a
+<code class="xref py py-class docutils literal notranslate"><span class="pre">cogdl.data.dataset</span></code> to a mini-batch.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd><p class="first">dataset (Dataset): The dataset from which to load the data.
+batch_size (int, optional): How may samples per batch to load.</p>
+<blockquote>
+<div>(default: <code class="xref py py-obj docutils literal notranslate"><span class="pre">1</span></code>)</div></blockquote>
+<dl class="last docutils">
+<dt>shuffle (bool, optional): If set to <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>, the data will be</dt>
+<dd>reshuffled at every epoch (default: <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>)</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="data.dataloader.DenseDataLoader">
+<em class="property">class </em><code class="descclassname">data.dataloader.</code><code class="descname">DenseDataLoader</code><span class="sig-paren">(</span><em>dataset</em>, <em>batch_size=1</em>, <em>shuffle=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/dataloader.html#DenseDataLoader"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.dataloader.DenseDataLoader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.utils.data.dataloader.DataLoader</span></code></p>
+<p>Data loader which merges data objects from a
+<code class="xref py py-class docutils literal notranslate"><span class="pre">cogdl.data.dataset</span></code> to a mini-batch.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">To make use of this data loader, all graphs in the dataset needs to
+have the same shape for each its attributes.
+Therefore, this data loader should only be used when working with
+<em>dense</em> adjacency matrices.</p>
+</div>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd><p class="first">dataset (Dataset): The dataset from which to load the data.
+batch_size (int, optional): How may samples per batch to load.</p>
+<blockquote>
+<div>(default: <code class="xref py py-obj docutils literal notranslate"><span class="pre">1</span></code>)</div></blockquote>
+<dl class="last docutils">
+<dt>shuffle (bool, optional): If set to <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>, the data will be</dt>
+<dd>reshuffled at every epoch (default: <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>)</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-data.dataset">
+<span id="data-dataset-module"></span><h2>data.dataset module<a class="headerlink" href="#module-data.dataset" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="data.dataset.Dataset">
+<em class="property">class </em><code class="descclassname">data.dataset.</code><code class="descname">Dataset</code><span class="sig-paren">(</span><em>root</em>, <em>transform=None</em>, <em>pre_transform=None</em>, <em>pre_filter=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/dataset.html#Dataset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.dataset.Dataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.utils.data.dataset.Dataset</span></code></p>
+<p>Dataset base class for creating graph datasets.
+See <a class="reference external" href="https://rusty1s.github.io/pycogdl/build/html/notes/create_dataset.html">here</a> for the accompanying tutorial.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd><p class="first">root (string): Root directory where the dataset should be saved.
+transform (callable, optional): A function/transform that takes in an</p>
+<blockquote>
+<div><code class="xref py py-obj docutils literal notranslate"><span class="pre">cogdl.data.Data</span></code> object and returns a transformed
+version. The data object will be transformed before every access.
+(default: <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>)</div></blockquote>
+<dl class="last docutils">
+<dt>pre_transform (callable, optional): A function/transform that takes in</dt>
+<dd>an <code class="xref py py-obj docutils literal notranslate"><span class="pre">cogdl.data.Data</span></code> object and returns a
+transformed version. The data object will be transformed before
+being saved to disk. (default: <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>)</dd>
+<dt>pre_filter (callable, optional): A function that takes in an</dt>
+<dd><code class="xref py py-obj docutils literal notranslate"><span class="pre">cogdl.data.Data</span></code> object and returns a boolean
+value, indicating whether the data object should be included in the
+final dataset. (default: <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>)</dd>
+</dl>
+</dd>
+</dl>
+<dl class="method">
+<dt id="data.dataset.Dataset.download">
+<code class="descname">download</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/dataset.html#Dataset.download"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.dataset.Dataset.download" title="Permalink to this definition">¶</a></dt>
+<dd><p>Downloads the dataset to the <code class="xref py py-obj docutils literal notranslate"><span class="pre">self.raw_dir</span></code> folder.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.dataset.Dataset.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>idx</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/dataset.html#Dataset.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.dataset.Dataset.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the data object at index <code class="xref py py-obj docutils literal notranslate"><span class="pre">idx</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.dataset.Dataset.num_features">
+<code class="descname">num_features</code><a class="headerlink" href="#data.dataset.Dataset.num_features" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of features per node in the graph.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.dataset.Dataset.process">
+<code class="descname">process</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/dataset.html#Dataset.process"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.dataset.Dataset.process" title="Permalink to this definition">¶</a></dt>
+<dd><p>Processes the dataset to the <code class="xref py py-obj docutils literal notranslate"><span class="pre">self.processed_dir</span></code> folder.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.dataset.Dataset.processed_file_names">
+<code class="descname">processed_file_names</code><a class="headerlink" href="#data.dataset.Dataset.processed_file_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the files to find in the <code class="xref py py-obj docutils literal notranslate"><span class="pre">self.processed_dir</span></code>
+folder in order to skip the processing.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.dataset.Dataset.processed_paths">
+<code class="descname">processed_paths</code><a class="headerlink" href="#data.dataset.Dataset.processed_paths" title="Permalink to this definition">¶</a></dt>
+<dd><p>The filepaths to find in the <code class="xref py py-obj docutils literal notranslate"><span class="pre">self.processed_dir</span></code>
+folder in order to skip the processing.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.dataset.Dataset.raw_file_names">
+<code class="descname">raw_file_names</code><a class="headerlink" href="#data.dataset.Dataset.raw_file_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the files to find in the <code class="xref py py-obj docutils literal notranslate"><span class="pre">self.raw_dir</span></code> folder in
+order to skip the download.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.dataset.Dataset.raw_paths">
+<code class="descname">raw_paths</code><a class="headerlink" href="#data.dataset.Dataset.raw_paths" title="Permalink to this definition">¶</a></dt>
+<dd><p>The filepaths to find in order to skip the download.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="data.dataset.files_exist">
+<code class="descclassname">data.dataset.</code><code class="descname">files_exist</code><span class="sig-paren">(</span><em>files</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/dataset.html#files_exist"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.dataset.files_exist" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="data.dataset.to_list">
+<code class="descclassname">data.dataset.</code><code class="descname">to_list</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/dataset.html#to_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.dataset.to_list" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-data.download">
+<span id="data-download-module"></span><h2>data.download module<a class="headerlink" href="#module-data.download" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="data.download.download_url">
+<code class="descclassname">data.download.</code><code class="descname">download_url</code><span class="sig-paren">(</span><em>url</em>, <em>folder</em>, <em>log=True</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/download.html#download_url"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.download.download_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Downloads the content of an URL to a specific folder.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd><p class="first">url (string): The url.
+folder (string): The folder.
+log (bool, optional): If <a class="reference external" href="https://docs.python.org/3/library/constants.html#False" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a>, will not print anything to the</p>
+<blockquote class="last">
+<div>console. (default: <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>)</div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-data.extract">
+<span id="data-extract-module"></span><h2>data.extract module<a class="headerlink" href="#module-data.extract" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="data.extract.extract_bz2">
+<code class="descclassname">data.extract.</code><code class="descname">extract_bz2</code><span class="sig-paren">(</span><em>path</em>, <em>folder</em>, <em>log=True</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/extract.html#extract_bz2"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.extract.extract_bz2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="data.extract.extract_gz">
+<code class="descclassname">data.extract.</code><code class="descname">extract_gz</code><span class="sig-paren">(</span><em>path</em>, <em>folder</em>, <em>log=True</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/extract.html#extract_gz"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.extract.extract_gz" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="data.extract.extract_tar">
+<code class="descclassname">data.extract.</code><code class="descname">extract_tar</code><span class="sig-paren">(</span><em>path</em>, <em>folder</em>, <em>mode='r:gz'</em>, <em>log=True</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/extract.html#extract_tar"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.extract.extract_tar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extracts a tar archive to a specific folder.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd><p class="first">path (string): The path to the tar archive.
+folder (string): The folder.
+mode (string, optional): The compression mode. (default: <code class="xref py py-obj docutils literal notranslate"><span class="pre">&quot;r:gz&quot;</span></code>)
+log (bool, optional): If <a class="reference external" href="https://docs.python.org/3/library/constants.html#False" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a>, will not print anything to the</p>
+<blockquote class="last">
+<div>console. (default: <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>)</div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="data.extract.extract_zip">
+<code class="descclassname">data.extract.</code><code class="descname">extract_zip</code><span class="sig-paren">(</span><em>path</em>, <em>folder</em>, <em>log=True</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/extract.html#extract_zip"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.extract.extract_zip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extracts a zip archive to a specific folder.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd><p class="first">path (string): The path to the tar archive.
+folder (string): The folder.
+log (bool, optional): If <a class="reference external" href="https://docs.python.org/3/library/constants.html#False" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a>, will not print anything to the</p>
+<blockquote class="last">
+<div>console. (default: <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>)</div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="data.extract.maybe_log">
+<code class="descclassname">data.extract.</code><code class="descname">maybe_log</code><span class="sig-paren">(</span><em>path</em>, <em>log=True</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/extract.html#maybe_log"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.extract.maybe_log" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-data.in_memory_dataset">
+<span id="data-in-memory-dataset-module"></span><h2>data.in_memory_dataset module<a class="headerlink" href="#module-data.in_memory_dataset" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="data.in_memory_dataset.InMemoryDataset">
+<em class="property">class </em><code class="descclassname">data.in_memory_dataset.</code><code class="descname">InMemoryDataset</code><span class="sig-paren">(</span><em>root</em>, <em>transform=None</em>, <em>pre_transform=None</em>, <em>pre_filter=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/in_memory_dataset.html#InMemoryDataset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.in_memory_dataset.InMemoryDataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">cogdl.data.dataset.Dataset</span></code></p>
+<p>Dataset base class for creating graph datasets which fit completely
+into memory.
+See <a class="reference external" href="https://rusty1s.github.io/pycogdl/build/html/notes/create_dataset.html#creating-in-memory-datasets">here</a> for the accompanying
+tutorial.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd><p class="first">root (string): Root directory where the dataset should be saved.
+transform (callable, optional): A function/transform that takes in an</p>
+<blockquote>
+<div><code class="xref py py-obj docutils literal notranslate"><span class="pre">cogdl.data.Data</span></code> object and returns a transformed
+version. The data object will be transformed before every access.
+(default: <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>)</div></blockquote>
+<dl class="last docutils">
+<dt>pre_transform (callable, optional): A function/transform that takes in</dt>
+<dd>an <code class="xref py py-obj docutils literal notranslate"><span class="pre">cogdl.data.Data</span></code> object and returns a
+transformed version. The data object will be transformed before
+being saved to disk. (default: <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>)</dd>
+<dt>pre_filter (callable, optional): A function that takes in an</dt>
+<dd><code class="xref py py-obj docutils literal notranslate"><span class="pre">cogdl.data.Data</span></code> object and returns a boolean
+value, indicating whether the data object should be included in the
+final dataset. (default: <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>)</dd>
+</dl>
+</dd>
+</dl>
+<dl class="method">
+<dt id="data.in_memory_dataset.InMemoryDataset.collate">
+<code class="descname">collate</code><span class="sig-paren">(</span><em>data_list</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/in_memory_dataset.html#InMemoryDataset.collate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.in_memory_dataset.InMemoryDataset.collate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Collates a python list of data objects to the internal storage
+format of <code class="xref py py-class docutils literal notranslate"><span class="pre">cogdl.data.InMemoryDataset</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.in_memory_dataset.InMemoryDataset.download">
+<code class="descname">download</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/in_memory_dataset.html#InMemoryDataset.download"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.in_memory_dataset.InMemoryDataset.download" title="Permalink to this definition">¶</a></dt>
+<dd><p>Downloads the dataset to the <code class="xref py py-obj docutils literal notranslate"><span class="pre">self.raw_dir</span></code> folder.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.in_memory_dataset.InMemoryDataset.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>idx</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/in_memory_dataset.html#InMemoryDataset.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.in_memory_dataset.InMemoryDataset.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the data object at index <code class="xref py py-obj docutils literal notranslate"><span class="pre">idx</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.in_memory_dataset.InMemoryDataset.num_classes">
+<code class="descname">num_classes</code><a class="headerlink" href="#data.in_memory_dataset.InMemoryDataset.num_classes" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of classes in the dataset.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.in_memory_dataset.InMemoryDataset.process">
+<code class="descname">process</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/in_memory_dataset.html#InMemoryDataset.process"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.in_memory_dataset.InMemoryDataset.process" title="Permalink to this definition">¶</a></dt>
+<dd><p>Processes the dataset to the <code class="xref py py-obj docutils literal notranslate"><span class="pre">self.processed_dir</span></code> folder.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.in_memory_dataset.InMemoryDataset.processed_file_names">
+<code class="descname">processed_file_names</code><a class="headerlink" href="#data.in_memory_dataset.InMemoryDataset.processed_file_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the files to find in the <code class="xref py py-obj docutils literal notranslate"><span class="pre">self.processed_dir</span></code>
+folder in order to skip the processing.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.in_memory_dataset.InMemoryDataset.raw_file_names">
+<code class="descname">raw_file_names</code><a class="headerlink" href="#data.in_memory_dataset.InMemoryDataset.raw_file_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the files to find in the <code class="xref py py-obj docutils literal notranslate"><span class="pre">self.raw_dir</span></code> folder in
+order to skip the download.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.in_memory_dataset.InMemoryDataset.shuffle">
+<code class="descname">shuffle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/in_memory_dataset.html#InMemoryDataset.shuffle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.in_memory_dataset.InMemoryDataset.shuffle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Randomly shuffles the examples in the dataset.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-data.makedirs">
+<span id="data-makedirs-module"></span><h2>data.makedirs module<a class="headerlink" href="#module-data.makedirs" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="data.makedirs.makedirs">
+<code class="descclassname">data.makedirs.</code><code class="descname">makedirs</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/makedirs.html#makedirs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.makedirs.makedirs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-data">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-data" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="data.Data">
+<em class="property">class </em><code class="descclassname">data.</code><code class="descname">Data</code><span class="sig-paren">(</span><em>x=None</em>, <em>edge_index=None</em>, <em>edge_attr=None</em>, <em>y=None</em>, <em>pos=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/data.html#Data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.Data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>A plain old python object modeling a single graph with various
+(optional) attributes:</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd><dl class="first last docutils">
+<dt>x (Tensor, optional): Node feature matrix with shape :obj:<a href="#id3"><span class="problematic" id="id4">`</span></a>[num_nodes,</dt>
+<dd>num_node_features]`. (default: <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>)</dd>
+<dt>edge_index (LongTensor, optional): Graph connectivity in COO format</dt>
+<dd>with shape <code class="xref py py-obj docutils literal notranslate"><span class="pre">[2,</span> <span class="pre">num_edges]</span></code>. (default: <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>)</dd>
+<dt>edge_attr (Tensor, optional): Edge feature matrix with shape</dt>
+<dd><code class="xref py py-obj docutils literal notranslate"><span class="pre">[num_edges,</span> <span class="pre">num_edge_features]</span></code>. (default: <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>)</dd>
+<dt>y (Tensor, optional): Graph or node targets with arbitrary shape.</dt>
+<dd>(default: <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>)</dd>
+<dt>pos (Tensor, optional): Node position matrix with shape</dt>
+<dd><code class="xref py py-obj docutils literal notranslate"><span class="pre">[num_nodes,</span> <span class="pre">num_dimensions]</span></code>. (default: <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>)</dd>
+</dl>
+</dd>
+</dl>
+<p>The data object is not restricted to these attributes and can be extented
+by any other additional data.</p>
+<dl class="method">
+<dt id="data.Data.apply">
+<code class="descname">apply</code><span class="sig-paren">(</span><em>func</em>, <em>*keys</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/data.html#Data.apply"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.Data.apply" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the function <code class="xref py py-obj docutils literal notranslate"><span class="pre">func</span></code> to all attributes <code class="xref py py-obj docutils literal notranslate"><span class="pre">*keys</span></code>.
+If <code class="xref py py-obj docutils literal notranslate"><span class="pre">*keys</span></code> is not given, <code class="xref py py-obj docutils literal notranslate"><span class="pre">func</span></code> is applied to all present
+attributes.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.Data.cat_dim">
+<code class="descname">cat_dim</code><span class="sig-paren">(</span><em>key</em>, <em>value</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/data.html#Data.cat_dim"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.Data.cat_dim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the dimension in which the attribute <code class="xref py py-obj docutils literal notranslate"><span class="pre">key</span></code> with
+content <code class="xref py py-obj docutils literal notranslate"><span class="pre">value</span></code> gets concatenated when creating batches.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is for internal use only, and should only be overridden
+if the batch concatenation process is corrupted for a specific data
+attribute.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.Data.clone">
+<code class="descname">clone</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/data.html#Data.clone"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.Data.clone" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="data.Data.contiguous">
+<code class="descname">contiguous</code><span class="sig-paren">(</span><em>*keys</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/data.html#Data.contiguous"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.Data.contiguous" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ensures a contiguous memory layout for all attributes <code class="xref py py-obj docutils literal notranslate"><span class="pre">*keys</span></code>.
+If <code class="xref py py-obj docutils literal notranslate"><span class="pre">*keys</span></code> is not given, all present attributes are ensured to
+have a contiguous memory layout.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.Data.cuda">
+<code class="descname">cuda</code><span class="sig-paren">(</span><em>*keys</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/data.html#Data.cuda"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.Data.cuda" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="staticmethod">
+<dt id="data.Data.from_dict">
+<em class="property">static </em><code class="descname">from_dict</code><span class="sig-paren">(</span><em>dictionary</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/data.html#Data.from_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.Data.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a data object from a python dictionary.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.Data.is_coalesced">
+<code class="descname">is_coalesced</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/data.html#Data.is_coalesced"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.Data.is_coalesced" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>, if edge indices are ordered and do not contain
+duplicate entries.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.Data.keys">
+<code class="descname">keys</code><a class="headerlink" href="#data.Data.keys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns all names of graph attributes.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.Data.num_edges">
+<code class="descname">num_edges</code><a class="headerlink" href="#data.Data.num_edges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of edges in the graph.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.Data.num_features">
+<code class="descname">num_features</code><a class="headerlink" href="#data.Data.num_features" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of features per node in the graph.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.Data.to">
+<code class="descname">to</code><span class="sig-paren">(</span><em>device</em>, <em>*keys</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/data.html#Data.to"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.Data.to" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs tensor dtype and/or device conversion to all attributes
+<code class="xref py py-obj docutils literal notranslate"><span class="pre">*keys</span></code>.
+If <code class="xref py py-obj docutils literal notranslate"><span class="pre">*keys</span></code> is not given, the conversion is applied to all present
+attributes.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="data.Batch">
+<em class="property">class </em><code class="descclassname">data.</code><code class="descname">Batch</code><span class="sig-paren">(</span><em>batch=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/batch.html#Batch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.Batch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">cogdl.data.data.Data</span></code></p>
+<p>A plain old python object modeling a batch of graphs as one big
+(dicconnected) graph. With <code class="xref py py-class docutils literal notranslate"><span class="pre">cogdl.data.Data</span></code> being the
+base class, all its methods can also be used here.
+In addition, single graphs can be reconstructed via the assignment vector
+<a class="reference internal" href="#module-data.batch" title="data.batch"><code class="xref py py-obj docutils literal notranslate"><span class="pre">batch</span></code></a>, which maps each node to its respective graph identifier.</p>
+<dl class="method">
+<dt id="data.Batch.cumsum">
+<code class="descname">cumsum</code><span class="sig-paren">(</span><em>key</em>, <em>item</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/batch.html#Batch.cumsum"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.Batch.cumsum" title="Permalink to this definition">¶</a></dt>
+<dd><p>If <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>, the attribute <code class="xref py py-obj docutils literal notranslate"><span class="pre">key</span></code> with content <code class="xref py py-obj docutils literal notranslate"><span class="pre">item</span></code>
+should be added up cumulatively before concatenated together.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is for internal use only, and should only be overridden
+if the batch concatenation process is corrupted for a specific data
+attribute.</p>
+</div>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="data.Batch.from_data_list">
+<em class="property">static </em><code class="descname">from_data_list</code><span class="sig-paren">(</span><em>data_list</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/batch.html#Batch.from_data_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.Batch.from_data_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs a batch object from a python list holding
+<code class="xref py py-class docutils literal notranslate"><span class="pre">cogdl.data.Data</span></code> objects.
+The assignment vector <a class="reference internal" href="#module-data.batch" title="data.batch"><code class="xref py py-obj docutils literal notranslate"><span class="pre">batch</span></code></a> is created on the fly.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.Batch.num_graphs">
+<code class="descname">num_graphs</code><a class="headerlink" href="#data.Batch.num_graphs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of graphs in the batch.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="data.Dataset">
+<em class="property">class </em><code class="descclassname">data.</code><code class="descname">Dataset</code><span class="sig-paren">(</span><em>root</em>, <em>transform=None</em>, <em>pre_transform=None</em>, <em>pre_filter=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/dataset.html#Dataset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.Dataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.utils.data.dataset.Dataset</span></code></p>
+<p>Dataset base class for creating graph datasets.
+See <a class="reference external" href="https://rusty1s.github.io/pycogdl/build/html/notes/create_dataset.html">here</a> for the accompanying tutorial.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd><p class="first">root (string): Root directory where the dataset should be saved.
+transform (callable, optional): A function/transform that takes in an</p>
+<blockquote>
+<div><code class="xref py py-obj docutils literal notranslate"><span class="pre">cogdl.data.Data</span></code> object and returns a transformed
+version. The data object will be transformed before every access.
+(default: <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>)</div></blockquote>
+<dl class="last docutils">
+<dt>pre_transform (callable, optional): A function/transform that takes in</dt>
+<dd>an <code class="xref py py-obj docutils literal notranslate"><span class="pre">cogdl.data.Data</span></code> object and returns a
+transformed version. The data object will be transformed before
+being saved to disk. (default: <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>)</dd>
+<dt>pre_filter (callable, optional): A function that takes in an</dt>
+<dd><code class="xref py py-obj docutils literal notranslate"><span class="pre">cogdl.data.Data</span></code> object and returns a boolean
+value, indicating whether the data object should be included in the
+final dataset. (default: <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>)</dd>
+</dl>
+</dd>
+</dl>
+<dl class="method">
+<dt id="data.Dataset.download">
+<code class="descname">download</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/dataset.html#Dataset.download"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.Dataset.download" title="Permalink to this definition">¶</a></dt>
+<dd><p>Downloads the dataset to the <code class="xref py py-obj docutils literal notranslate"><span class="pre">self.raw_dir</span></code> folder.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.Dataset.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>idx</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/dataset.html#Dataset.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.Dataset.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the data object at index <code class="xref py py-obj docutils literal notranslate"><span class="pre">idx</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.Dataset.num_features">
+<code class="descname">num_features</code><a class="headerlink" href="#data.Dataset.num_features" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of features per node in the graph.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.Dataset.process">
+<code class="descname">process</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/dataset.html#Dataset.process"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.Dataset.process" title="Permalink to this definition">¶</a></dt>
+<dd><p>Processes the dataset to the <code class="xref py py-obj docutils literal notranslate"><span class="pre">self.processed_dir</span></code> folder.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.Dataset.processed_file_names">
+<code class="descname">processed_file_names</code><a class="headerlink" href="#data.Dataset.processed_file_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the files to find in the <code class="xref py py-obj docutils literal notranslate"><span class="pre">self.processed_dir</span></code>
+folder in order to skip the processing.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.Dataset.processed_paths">
+<code class="descname">processed_paths</code><a class="headerlink" href="#data.Dataset.processed_paths" title="Permalink to this definition">¶</a></dt>
+<dd><p>The filepaths to find in the <code class="xref py py-obj docutils literal notranslate"><span class="pre">self.processed_dir</span></code>
+folder in order to skip the processing.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.Dataset.raw_file_names">
+<code class="descname">raw_file_names</code><a class="headerlink" href="#data.Dataset.raw_file_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the files to find in the <code class="xref py py-obj docutils literal notranslate"><span class="pre">self.raw_dir</span></code> folder in
+order to skip the download.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.Dataset.raw_paths">
+<code class="descname">raw_paths</code><a class="headerlink" href="#data.Dataset.raw_paths" title="Permalink to this definition">¶</a></dt>
+<dd><p>The filepaths to find in order to skip the download.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="data.InMemoryDataset">
+<em class="property">class </em><code class="descclassname">data.</code><code class="descname">InMemoryDataset</code><span class="sig-paren">(</span><em>root</em>, <em>transform=None</em>, <em>pre_transform=None</em>, <em>pre_filter=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/in_memory_dataset.html#InMemoryDataset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.InMemoryDataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">cogdl.data.dataset.Dataset</span></code></p>
+<p>Dataset base class for creating graph datasets which fit completely
+into memory.
+See <a class="reference external" href="https://rusty1s.github.io/pycogdl/build/html/notes/create_dataset.html#creating-in-memory-datasets">here</a> for the accompanying
+tutorial.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd><p class="first">root (string): Root directory where the dataset should be saved.
+transform (callable, optional): A function/transform that takes in an</p>
+<blockquote>
+<div><code class="xref py py-obj docutils literal notranslate"><span class="pre">cogdl.data.Data</span></code> object and returns a transformed
+version. The data object will be transformed before every access.
+(default: <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>)</div></blockquote>
+<dl class="last docutils">
+<dt>pre_transform (callable, optional): A function/transform that takes in</dt>
+<dd>an <code class="xref py py-obj docutils literal notranslate"><span class="pre">cogdl.data.Data</span></code> object and returns a
+transformed version. The data object will be transformed before
+being saved to disk. (default: <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>)</dd>
+<dt>pre_filter (callable, optional): A function that takes in an</dt>
+<dd><code class="xref py py-obj docutils literal notranslate"><span class="pre">cogdl.data.Data</span></code> object and returns a boolean
+value, indicating whether the data object should be included in the
+final dataset. (default: <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>)</dd>
+</dl>
+</dd>
+</dl>
+<dl class="method">
+<dt id="data.InMemoryDataset.collate">
+<code class="descname">collate</code><span class="sig-paren">(</span><em>data_list</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/in_memory_dataset.html#InMemoryDataset.collate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.InMemoryDataset.collate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Collates a python list of data objects to the internal storage
+format of <code class="xref py py-class docutils literal notranslate"><span class="pre">cogdl.data.InMemoryDataset</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.InMemoryDataset.download">
+<code class="descname">download</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/in_memory_dataset.html#InMemoryDataset.download"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.InMemoryDataset.download" title="Permalink to this definition">¶</a></dt>
+<dd><p>Downloads the dataset to the <code class="xref py py-obj docutils literal notranslate"><span class="pre">self.raw_dir</span></code> folder.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.InMemoryDataset.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>idx</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/in_memory_dataset.html#InMemoryDataset.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.InMemoryDataset.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the data object at index <code class="xref py py-obj docutils literal notranslate"><span class="pre">idx</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.InMemoryDataset.num_classes">
+<code class="descname">num_classes</code><a class="headerlink" href="#data.InMemoryDataset.num_classes" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of classes in the dataset.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.InMemoryDataset.process">
+<code class="descname">process</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/in_memory_dataset.html#InMemoryDataset.process"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.InMemoryDataset.process" title="Permalink to this definition">¶</a></dt>
+<dd><p>Processes the dataset to the <code class="xref py py-obj docutils literal notranslate"><span class="pre">self.processed_dir</span></code> folder.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.InMemoryDataset.processed_file_names">
+<code class="descname">processed_file_names</code><a class="headerlink" href="#data.InMemoryDataset.processed_file_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the files to find in the <code class="xref py py-obj docutils literal notranslate"><span class="pre">self.processed_dir</span></code>
+folder in order to skip the processing.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.InMemoryDataset.raw_file_names">
+<code class="descname">raw_file_names</code><a class="headerlink" href="#data.InMemoryDataset.raw_file_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the files to find in the <code class="xref py py-obj docutils literal notranslate"><span class="pre">self.raw_dir</span></code> folder in
+order to skip the download.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.InMemoryDataset.shuffle">
+<code class="descname">shuffle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/in_memory_dataset.html#InMemoryDataset.shuffle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.InMemoryDataset.shuffle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Randomly shuffles the examples in the dataset.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="data.DataLoader">
+<em class="property">class </em><code class="descclassname">data.</code><code class="descname">DataLoader</code><span class="sig-paren">(</span><em>dataset</em>, <em>batch_size=1</em>, <em>shuffle=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/dataloader.html#DataLoader"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.DataLoader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.utils.data.dataloader.DataLoader</span></code></p>
+<p>Data loader which merges data objects from a
+<code class="xref py py-class docutils literal notranslate"><span class="pre">cogdl.data.dataset</span></code> to a mini-batch.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd><p class="first">dataset (Dataset): The dataset from which to load the data.
+batch_size (int, optional): How may samples per batch to load.</p>
+<blockquote>
+<div>(default: <code class="xref py py-obj docutils literal notranslate"><span class="pre">1</span></code>)</div></blockquote>
+<dl class="last docutils">
+<dt>shuffle (bool, optional): If set to <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>, the data will be</dt>
+<dd>reshuffled at every epoch (default: <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>)</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="data.DataListLoader">
+<em class="property">class </em><code class="descclassname">data.</code><code class="descname">DataListLoader</code><span class="sig-paren">(</span><em>dataset</em>, <em>batch_size=1</em>, <em>shuffle=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/dataloader.html#DataListLoader"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.DataListLoader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.utils.data.dataloader.DataLoader</span></code></p>
+<p>Data loader which merges data objects from a
+<code class="xref py py-class docutils literal notranslate"><span class="pre">cogdl.data.dataset</span></code> to a python list.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This data loader should be used for multi-gpu support via
+<code class="xref py py-class docutils literal notranslate"><span class="pre">cogdl.nn.DataParallel</span></code>.</p>
+</div>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd><p class="first">dataset (Dataset): The dataset from which to load the data.
+batch_size (int, optional): How may samples per batch to load.</p>
+<blockquote>
+<div>(default: <code class="xref py py-obj docutils literal notranslate"><span class="pre">1</span></code>)</div></blockquote>
+<dl class="last docutils">
+<dt>shuffle (bool, optional): If set to <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>, the data will be</dt>
+<dd>reshuffled at every epoch (default: <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>)</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="data.DenseDataLoader">
+<em class="property">class </em><code class="descclassname">data.</code><code class="descname">DenseDataLoader</code><span class="sig-paren">(</span><em>dataset</em>, <em>batch_size=1</em>, <em>shuffle=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/dataloader.html#DenseDataLoader"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.DenseDataLoader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.utils.data.dataloader.DataLoader</span></code></p>
+<p>Data loader which merges data objects from a
+<code class="xref py py-class docutils literal notranslate"><span class="pre">cogdl.data.dataset</span></code> to a mini-batch.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">To make use of this data loader, all graphs in the dataset needs to
+have the same shape for each its attributes.
+Therefore, this data loader should only be used when working with
+<em>dense</em> adjacency matrices.</p>
+</div>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd><p class="first">dataset (Dataset): The dataset from which to load the data.
+batch_size (int, optional): How may samples per batch to load.</p>
+<blockquote>
+<div>(default: <code class="xref py py-obj docutils literal notranslate"><span class="pre">1</span></code>)</div></blockquote>
+<dl class="last docutils">
+<dt>shuffle (bool, optional): If set to <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>, the data will be</dt>
+<dd>reshuffled at every epoch (default: <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>)</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="data.download_url">
+<code class="descclassname">data.</code><code class="descname">download_url</code><span class="sig-paren">(</span><em>url</em>, <em>folder</em>, <em>log=True</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/download.html#download_url"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.download_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Downloads the content of an URL to a specific folder.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd><p class="first">url (string): The url.
+folder (string): The folder.
+log (bool, optional): If <a class="reference external" href="https://docs.python.org/3/library/constants.html#False" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a>, will not print anything to the</p>
+<blockquote class="last">
+<div>console. (default: <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>)</div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="data.extract_tar">
+<code class="descclassname">data.</code><code class="descname">extract_tar</code><span class="sig-paren">(</span><em>path</em>, <em>folder</em>, <em>mode='r:gz'</em>, <em>log=True</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/extract.html#extract_tar"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.extract_tar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extracts a tar archive to a specific folder.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd><p class="first">path (string): The path to the tar archive.
+folder (string): The folder.
+mode (string, optional): The compression mode. (default: <code class="xref py py-obj docutils literal notranslate"><span class="pre">&quot;r:gz&quot;</span></code>)
+log (bool, optional): If <a class="reference external" href="https://docs.python.org/3/library/constants.html#False" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a>, will not print anything to the</p>
+<blockquote class="last">
+<div>console. (default: <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>)</div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="data.extract_zip">
+<code class="descclassname">data.</code><code class="descname">extract_zip</code><span class="sig-paren">(</span><em>path</em>, <em>folder</em>, <em>log=True</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/extract.html#extract_zip"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.extract_zip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extracts a zip archive to a specific folder.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd><p class="first">path (string): The path to the tar archive.
+folder (string): The folder.
+log (bool, optional): If <a class="reference external" href="https://docs.python.org/3/library/constants.html#False" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a>, will not print anything to the</p>
+<blockquote class="last">
+<div>console. (default: <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>)</div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="data.extract_bz2">
+<code class="descclassname">data.</code><code class="descname">extract_bz2</code><span class="sig-paren">(</span><em>path</em>, <em>folder</em>, <em>log=True</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/extract.html#extract_bz2"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.extract_bz2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="data.extract_gz">
+<code class="descclassname">data.</code><code class="descname">extract_gz</code><span class="sig-paren">(</span><em>path</em>, <em>folder</em>, <em>log=True</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/data/extract.html#extract_gz"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data.extract_gz" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="datasets.html" class="btn btn-neutral float-right" title="datasets package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="modules.html" class="btn btn-neutral float-left" title="cogdl" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, KEG
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

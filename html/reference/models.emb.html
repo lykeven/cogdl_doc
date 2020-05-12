@@ -1,0 +1,815 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>models.emb package &mdash; CogDL  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="models.nn package" href="models.nn.html" />
+    <link rel="prev" title="models package" href="models.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> CogDL
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="modules.html">cogdl</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="data.html">data package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="datasets.html">datasets package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="layers.html">layers package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="models.html">models package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="models.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="models.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="models.html#module-models.base_model">models.base_model module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="models.html#module-models">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="options.html">options module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tasks.html">tasks package</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citing.html">Citing</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CogDL</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Reference</a> &raquo;</li>
+        
+          <li><a href="modules.html">cogdl</a> &raquo;</li>
+        
+          <li><a href="models.html">models package</a> &raquo;</li>
+        
+      <li>models.emb package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/reference/models.emb.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="models-emb-package">
+<h1>models.emb package<a class="headerlink" href="#models-emb-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-models.emb.deepwalk">
+<span id="models-emb-deepwalk-module"></span><h2>models.emb.deepwalk module<a class="headerlink" href="#module-models.emb.deepwalk" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="models.emb.deepwalk.DeepWalk">
+<em class="property">class </em><code class="descclassname">models.emb.deepwalk.</code><code class="descname">DeepWalk</code><span class="sig-paren">(</span><em>dimension</em>, <em>walk_length</em>, <em>walk_num</em>, <em>window_size</em>, <em>worker</em>, <em>iteration</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/deepwalk.html#DeepWalk"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.deepwalk.DeepWalk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="models.html#models.base_model.BaseModel" title="models.base_model.BaseModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">models.base_model.BaseModel</span></code></a></p>
+<dl class="staticmethod">
+<dt id="models.emb.deepwalk.DeepWalk.add_args">
+<em class="property">static </em><code class="descname">add_args</code><span class="sig-paren">(</span><em>parser</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/deepwalk.html#DeepWalk.add_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.deepwalk.DeepWalk.add_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add model-specific arguments to the parser.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="models.emb.deepwalk.DeepWalk.build_model_from_args">
+<em class="property">classmethod </em><code class="descname">build_model_from_args</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/deepwalk.html#DeepWalk.build_model_from_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.deepwalk.DeepWalk.build_model_from_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build a new model instance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="models.emb.deepwalk.DeepWalk.train">
+<code class="descname">train</code><span class="sig-paren">(</span><em>G</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/deepwalk.html#DeepWalk.train"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.deepwalk.DeepWalk.train" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the module in training mode.</p>
+<p>This has any effect only on certain modules. See documentations of
+particular modules for details of their behaviors in training/evaluation
+mode, if they are affected, e.g. <code class="xref py py-class docutils literal notranslate"><span class="pre">Dropout</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">BatchNorm</span></code>,
+etc.</p>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>Module: self</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-models.emb.dngr">
+<span id="models-emb-dngr-module"></span><h2>models.emb.dngr module<a class="headerlink" href="#module-models.emb.dngr" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="models.emb.dngr.DNGR">
+<em class="property">class </em><code class="descclassname">models.emb.dngr.</code><code class="descname">DNGR</code><span class="sig-paren">(</span><em>hidden_size1</em>, <em>hidden_size2</em>, <em>noise</em>, <em>alpha</em>, <em>step</em>, <em>max_epoch</em>, <em>lr</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/dngr.html#DNGR"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.dngr.DNGR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="models.html#models.base_model.BaseModel" title="models.base_model.BaseModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">models.base_model.BaseModel</span></code></a></p>
+<dl class="staticmethod">
+<dt id="models.emb.dngr.DNGR.add_args">
+<em class="property">static </em><code class="descname">add_args</code><span class="sig-paren">(</span><em>parser</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/dngr.html#DNGR.add_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.dngr.DNGR.add_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add model-specific arguments to the parser.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="models.emb.dngr.DNGR.build_model_from_args">
+<em class="property">classmethod </em><code class="descname">build_model_from_args</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/dngr.html#DNGR.build_model_from_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.dngr.DNGR.build_model_from_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build a new model instance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="models.emb.dngr.DNGR.build_nn">
+<code class="descname">build_nn</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/dngr.html#DNGR.build_nn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.dngr.DNGR.build_nn" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="models.emb.dngr.DNGR.forward">
+<code class="descname">forward</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/dngr.html#DNGR.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.dngr.DNGR.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="models.emb.dngr.DNGR.get_denoised_matrix">
+<code class="descname">get_denoised_matrix</code><span class="sig-paren">(</span><em>mat</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/dngr.html#DNGR.get_denoised_matrix"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.dngr.DNGR.get_denoised_matrix" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="models.emb.dngr.DNGR.get_emb">
+<code class="descname">get_emb</code><span class="sig-paren">(</span><em>matrix</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/dngr.html#DNGR.get_emb"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.dngr.DNGR.get_emb" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="models.emb.dngr.DNGR.get_ppmi_matrix">
+<code class="descname">get_ppmi_matrix</code><span class="sig-paren">(</span><em>mat</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/dngr.html#DNGR.get_ppmi_matrix"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.dngr.DNGR.get_ppmi_matrix" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="models.emb.dngr.DNGR.random_surfing">
+<code class="descname">random_surfing</code><span class="sig-paren">(</span><em>adj_matrix</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/dngr.html#DNGR.random_surfing"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.dngr.DNGR.random_surfing" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="models.emb.dngr.DNGR.scale_matrix">
+<code class="descname">scale_matrix</code><span class="sig-paren">(</span><em>mat</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/dngr.html#DNGR.scale_matrix"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.dngr.DNGR.scale_matrix" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="models.emb.dngr.DNGR.train">
+<code class="descname">train</code><span class="sig-paren">(</span><em>G</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/dngr.html#DNGR.train"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.dngr.DNGR.train" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the module in training mode.</p>
+<p>This has any effect only on certain modules. See documentations of
+particular modules for details of their behaviors in training/evaluation
+mode, if they are affected, e.g. <code class="xref py py-class docutils literal notranslate"><span class="pre">Dropout</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">BatchNorm</span></code>,
+etc.</p>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>Module: self</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-models.emb.gatne">
+<span id="models-emb-gatne-module"></span><h2>models.emb.gatne module<a class="headerlink" href="#module-models.emb.gatne" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="models.emb.gatne.GATNE">
+<em class="property">class </em><code class="descclassname">models.emb.gatne.</code><code class="descname">GATNE</code><span class="sig-paren">(</span><em>dimension</em>, <em>walk_length</em>, <em>walk_num</em>, <em>window_size</em>, <em>worker</em>, <em>iteration</em>, <em>epoch</em>, <em>batch_size</em>, <em>edge_dim</em>, <em>att_dim</em>, <em>negative_samples</em>, <em>neighbor_samples</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/gatne.html#GATNE"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.gatne.GATNE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="models.html#models.base_model.BaseModel" title="models.base_model.BaseModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">models.base_model.BaseModel</span></code></a></p>
+<dl class="staticmethod">
+<dt id="models.emb.gatne.GATNE.add_args">
+<em class="property">static </em><code class="descname">add_args</code><span class="sig-paren">(</span><em>parser</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/gatne.html#GATNE.add_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.gatne.GATNE.add_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add model-specific arguments to the parser.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="models.emb.gatne.GATNE.build_model_from_args">
+<em class="property">classmethod </em><code class="descname">build_model_from_args</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/gatne.html#GATNE.build_model_from_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.gatne.GATNE.build_model_from_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build a new model instance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="models.emb.gatne.GATNE.train">
+<code class="descname">train</code><span class="sig-paren">(</span><em>network_data</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/gatne.html#GATNE.train"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.gatne.GATNE.train" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the module in training mode.</p>
+<p>This has any effect only on certain modules. See documentations of
+particular modules for details of their behaviors in training/evaluation
+mode, if they are affected, e.g. <code class="xref py py-class docutils literal notranslate"><span class="pre">Dropout</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">BatchNorm</span></code>,
+etc.</p>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>Module: self</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="models.emb.gatne.GATNEModel">
+<em class="property">class </em><code class="descclassname">models.emb.gatne.</code><code class="descname">GATNEModel</code><span class="sig-paren">(</span><em>num_nodes</em>, <em>embedding_size</em>, <em>embedding_u_size</em>, <em>edge_type_count</em>, <em>dim_a</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/gatne.html#GATNEModel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.gatne.GATNEModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="models.emb.gatne.GATNEModel.forward">
+<code class="descname">forward</code><span class="sig-paren">(</span><em>train_inputs</em>, <em>train_types</em>, <em>node_neigh</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/gatne.html#GATNEModel.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.gatne.GATNEModel.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="models.emb.gatne.GATNEModel.reset_parameters">
+<code class="descname">reset_parameters</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/gatne.html#GATNEModel.reset_parameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.gatne.GATNEModel.reset_parameters" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="models.emb.gatne.NSLoss">
+<em class="property">class </em><code class="descclassname">models.emb.gatne.</code><code class="descname">NSLoss</code><span class="sig-paren">(</span><em>num_nodes</em>, <em>num_sampled</em>, <em>embedding_size</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/gatne.html#NSLoss"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.gatne.NSLoss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="models.emb.gatne.NSLoss.forward">
+<code class="descname">forward</code><span class="sig-paren">(</span><em>input</em>, <em>embs</em>, <em>label</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/gatne.html#NSLoss.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.gatne.NSLoss.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="models.emb.gatne.NSLoss.reset_parameters">
+<code class="descname">reset_parameters</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/gatne.html#NSLoss.reset_parameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.gatne.NSLoss.reset_parameters" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="models.emb.gatne.RWGraph">
+<em class="property">class </em><code class="descclassname">models.emb.gatne.</code><code class="descname">RWGraph</code><span class="sig-paren">(</span><em>nx_G</em>, <em>node_type=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/gatne.html#RWGraph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.gatne.RWGraph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="models.emb.gatne.RWGraph.simulate_walks">
+<code class="descname">simulate_walks</code><span class="sig-paren">(</span><em>num_walks</em>, <em>walk_length</em>, <em>schema=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/gatne.html#RWGraph.simulate_walks"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.gatne.RWGraph.simulate_walks" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="models.emb.gatne.RWGraph.walk">
+<code class="descname">walk</code><span class="sig-paren">(</span><em>walk_length</em>, <em>start</em>, <em>schema=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/gatne.html#RWGraph.walk"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.gatne.RWGraph.walk" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="models.emb.gatne.generate_pairs">
+<code class="descclassname">models.emb.gatne.</code><code class="descname">generate_pairs</code><span class="sig-paren">(</span><em>all_walks</em>, <em>vocab</em>, <em>window_size=5</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/gatne.html#generate_pairs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.gatne.generate_pairs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="models.emb.gatne.generate_vocab">
+<code class="descclassname">models.emb.gatne.</code><code class="descname">generate_vocab</code><span class="sig-paren">(</span><em>all_walks</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/gatne.html#generate_vocab"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.gatne.generate_vocab" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="models.emb.gatne.generate_walks">
+<code class="descclassname">models.emb.gatne.</code><code class="descname">generate_walks</code><span class="sig-paren">(</span><em>network_data</em>, <em>num_walks</em>, <em>walk_length</em>, <em>schema=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/gatne.html#generate_walks"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.gatne.generate_walks" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="models.emb.gatne.get_G_from_edges">
+<code class="descclassname">models.emb.gatne.</code><code class="descname">get_G_from_edges</code><span class="sig-paren">(</span><em>edges</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/gatne.html#get_G_from_edges"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.gatne.get_G_from_edges" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="models.emb.gatne.get_batches">
+<code class="descclassname">models.emb.gatne.</code><code class="descname">get_batches</code><span class="sig-paren">(</span><em>pairs</em>, <em>neighbors</em>, <em>batch_size</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/gatne.html#get_batches"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.gatne.get_batches" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-models.emb.grarep">
+<span id="models-emb-grarep-module"></span><h2>models.emb.grarep module<a class="headerlink" href="#module-models.emb.grarep" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="models.emb.grarep.GraRep">
+<em class="property">class </em><code class="descclassname">models.emb.grarep.</code><code class="descname">GraRep</code><span class="sig-paren">(</span><em>dimension</em>, <em>step</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/grarep.html#GraRep"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.grarep.GraRep" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="models.html#models.base_model.BaseModel" title="models.base_model.BaseModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">models.base_model.BaseModel</span></code></a></p>
+<dl class="staticmethod">
+<dt id="models.emb.grarep.GraRep.add_args">
+<em class="property">static </em><code class="descname">add_args</code><span class="sig-paren">(</span><em>parser</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/grarep.html#GraRep.add_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.grarep.GraRep.add_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add model-specific arguments to the parser.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="models.emb.grarep.GraRep.build_model_from_args">
+<em class="property">classmethod </em><code class="descname">build_model_from_args</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/grarep.html#GraRep.build_model_from_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.grarep.GraRep.build_model_from_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build a new model instance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="models.emb.grarep.GraRep.train">
+<code class="descname">train</code><span class="sig-paren">(</span><em>G</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/grarep.html#GraRep.train"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.grarep.GraRep.train" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the module in training mode.</p>
+<p>This has any effect only on certain modules. See documentations of
+particular modules for details of their behaviors in training/evaluation
+mode, if they are affected, e.g. <code class="xref py py-class docutils literal notranslate"><span class="pre">Dropout</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">BatchNorm</span></code>,
+etc.</p>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>Module: self</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-models.emb.hope">
+<span id="models-emb-hope-module"></span><h2>models.emb.hope module<a class="headerlink" href="#module-models.emb.hope" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="models.emb.hope.HOPE">
+<em class="property">class </em><code class="descclassname">models.emb.hope.</code><code class="descname">HOPE</code><span class="sig-paren">(</span><em>dimension</em>, <em>beta</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/hope.html#HOPE"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.hope.HOPE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="models.html#models.base_model.BaseModel" title="models.base_model.BaseModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">models.base_model.BaseModel</span></code></a></p>
+<dl class="staticmethod">
+<dt id="models.emb.hope.HOPE.add_args">
+<em class="property">static </em><code class="descname">add_args</code><span class="sig-paren">(</span><em>parser</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/hope.html#HOPE.add_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.hope.HOPE.add_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add model-specific arguments to the parser.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="models.emb.hope.HOPE.build_model_from_args">
+<em class="property">classmethod </em><code class="descname">build_model_from_args</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/hope.html#HOPE.build_model_from_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.hope.HOPE.build_model_from_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build a new model instance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="models.emb.hope.HOPE.train">
+<code class="descname">train</code><span class="sig-paren">(</span><em>G</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/hope.html#HOPE.train"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.hope.HOPE.train" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the module in training mode.</p>
+<p>This has any effect only on certain modules. See documentations of
+particular modules for details of their behaviors in training/evaluation
+mode, if they are affected, e.g. <code class="xref py py-class docutils literal notranslate"><span class="pre">Dropout</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">BatchNorm</span></code>,
+etc.</p>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>Module: self</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-models.emb.line">
+<span id="models-emb-line-module"></span><h2>models.emb.line module<a class="headerlink" href="#module-models.emb.line" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="models.emb.line.LINE">
+<em class="property">class </em><code class="descclassname">models.emb.line.</code><code class="descname">LINE</code><span class="sig-paren">(</span><em>dimension</em>, <em>walk_length</em>, <em>walk_num</em>, <em>negative</em>, <em>batch_size</em>, <em>alpha</em>, <em>order</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/line.html#LINE"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.line.LINE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="models.html#models.base_model.BaseModel" title="models.base_model.BaseModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">models.base_model.BaseModel</span></code></a></p>
+<dl class="staticmethod">
+<dt id="models.emb.line.LINE.add_args">
+<em class="property">static </em><code class="descname">add_args</code><span class="sig-paren">(</span><em>parser</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/line.html#LINE.add_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.line.LINE.add_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add model-specific arguments to the parser.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="models.emb.line.LINE.build_model_from_args">
+<em class="property">classmethod </em><code class="descname">build_model_from_args</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/line.html#LINE.build_model_from_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.line.LINE.build_model_from_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build a new model instance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="models.emb.line.LINE.train">
+<code class="descname">train</code><span class="sig-paren">(</span><em>G</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/line.html#LINE.train"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.line.LINE.train" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the module in training mode.</p>
+<p>This has any effect only on certain modules. See documentations of
+particular modules for details of their behaviors in training/evaluation
+mode, if they are affected, e.g. <code class="xref py py-class docutils literal notranslate"><span class="pre">Dropout</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">BatchNorm</span></code>,
+etc.</p>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>Module: self</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-models.emb.netmf">
+<span id="models-emb-netmf-module"></span><h2>models.emb.netmf module<a class="headerlink" href="#module-models.emb.netmf" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="models.emb.netmf.NetMF">
+<em class="property">class </em><code class="descclassname">models.emb.netmf.</code><code class="descname">NetMF</code><span class="sig-paren">(</span><em>dimension</em>, <em>window_size</em>, <em>rank</em>, <em>negative</em>, <em>is_large=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/netmf.html#NetMF"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.netmf.NetMF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="models.html#models.base_model.BaseModel" title="models.base_model.BaseModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">models.base_model.BaseModel</span></code></a></p>
+<dl class="staticmethod">
+<dt id="models.emb.netmf.NetMF.add_args">
+<em class="property">static </em><code class="descname">add_args</code><span class="sig-paren">(</span><em>parser</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/netmf.html#NetMF.add_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.netmf.NetMF.add_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add model-specific arguments to the parser.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="models.emb.netmf.NetMF.build_model_from_args">
+<em class="property">classmethod </em><code class="descname">build_model_from_args</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/netmf.html#NetMF.build_model_from_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.netmf.NetMF.build_model_from_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build a new model instance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="models.emb.netmf.NetMF.train">
+<code class="descname">train</code><span class="sig-paren">(</span><em>G</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/netmf.html#NetMF.train"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.netmf.NetMF.train" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the module in training mode.</p>
+<p>This has any effect only on certain modules. See documentations of
+particular modules for details of their behaviors in training/evaluation
+mode, if they are affected, e.g. <code class="xref py py-class docutils literal notranslate"><span class="pre">Dropout</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">BatchNorm</span></code>,
+etc.</p>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>Module: self</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-models.emb.netsmf">
+<span id="models-emb-netsmf-module"></span><h2>models.emb.netsmf module<a class="headerlink" href="#module-models.emb.netsmf" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="models.emb.netsmf.NetSMF">
+<em class="property">class </em><code class="descclassname">models.emb.netsmf.</code><code class="descname">NetSMF</code><span class="sig-paren">(</span><em>dimension</em>, <em>window_size</em>, <em>negative</em>, <em>num_round</em>, <em>worker</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/netsmf.html#NetSMF"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.netsmf.NetSMF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="models.html#models.base_model.BaseModel" title="models.base_model.BaseModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">models.base_model.BaseModel</span></code></a></p>
+<dl class="staticmethod">
+<dt id="models.emb.netsmf.NetSMF.add_args">
+<em class="property">static </em><code class="descname">add_args</code><span class="sig-paren">(</span><em>parser</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/netsmf.html#NetSMF.add_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.netsmf.NetSMF.add_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add model-specific arguments to the parser.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="models.emb.netsmf.NetSMF.build_model_from_args">
+<em class="property">classmethod </em><code class="descname">build_model_from_args</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/netsmf.html#NetSMF.build_model_from_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.netsmf.NetSMF.build_model_from_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build a new model instance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="models.emb.netsmf.NetSMF.train">
+<code class="descname">train</code><span class="sig-paren">(</span><em>G</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/netsmf.html#NetSMF.train"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.netsmf.NetSMF.train" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the module in training mode.</p>
+<p>This has any effect only on certain modules. See documentations of
+particular modules for details of their behaviors in training/evaluation
+mode, if they are affected, e.g. <code class="xref py py-class docutils literal notranslate"><span class="pre">Dropout</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">BatchNorm</span></code>,
+etc.</p>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>Module: self</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-models.emb.node2vec">
+<span id="models-emb-node2vec-module"></span><h2>models.emb.node2vec module<a class="headerlink" href="#module-models.emb.node2vec" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="models.emb.node2vec.Node2vec">
+<em class="property">class </em><code class="descclassname">models.emb.node2vec.</code><code class="descname">Node2vec</code><span class="sig-paren">(</span><em>dimension</em>, <em>walk_length</em>, <em>walk_num</em>, <em>window_size</em>, <em>worker</em>, <em>iteration</em>, <em>p</em>, <em>q</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/node2vec.html#Node2vec"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.node2vec.Node2vec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="models.html#models.base_model.BaseModel" title="models.base_model.BaseModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">models.base_model.BaseModel</span></code></a></p>
+<dl class="staticmethod">
+<dt id="models.emb.node2vec.Node2vec.add_args">
+<em class="property">static </em><code class="descname">add_args</code><span class="sig-paren">(</span><em>parser</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/node2vec.html#Node2vec.add_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.node2vec.Node2vec.add_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add model-specific arguments to the parser.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="models.emb.node2vec.Node2vec.build_model_from_args">
+<em class="property">classmethod </em><code class="descname">build_model_from_args</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/node2vec.html#Node2vec.build_model_from_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.node2vec.Node2vec.build_model_from_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build a new model instance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="models.emb.node2vec.Node2vec.train">
+<code class="descname">train</code><span class="sig-paren">(</span><em>G</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/node2vec.html#Node2vec.train"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.node2vec.Node2vec.train" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the module in training mode.</p>
+<p>This has any effect only on certain modules. See documentations of
+particular modules for details of their behaviors in training/evaluation
+mode, if they are affected, e.g. <code class="xref py py-class docutils literal notranslate"><span class="pre">Dropout</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">BatchNorm</span></code>,
+etc.</p>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>Module: self</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-models.emb.prone">
+<span id="models-emb-prone-module"></span><h2>models.emb.prone module<a class="headerlink" href="#module-models.emb.prone" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="models.emb.prone.ProNE">
+<em class="property">class </em><code class="descclassname">models.emb.prone.</code><code class="descname">ProNE</code><span class="sig-paren">(</span><em>dimension</em>, <em>step</em>, <em>mu</em>, <em>theta</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/prone.html#ProNE"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.prone.ProNE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="models.html#models.base_model.BaseModel" title="models.base_model.BaseModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">models.base_model.BaseModel</span></code></a></p>
+<dl class="staticmethod">
+<dt id="models.emb.prone.ProNE.add_args">
+<em class="property">static </em><code class="descname">add_args</code><span class="sig-paren">(</span><em>parser</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/prone.html#ProNE.add_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.prone.ProNE.add_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add model-specific arguments to the parser.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="models.emb.prone.ProNE.build_model_from_args">
+<em class="property">classmethod </em><code class="descname">build_model_from_args</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/prone.html#ProNE.build_model_from_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.prone.ProNE.build_model_from_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build a new model instance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="models.emb.prone.ProNE.train">
+<code class="descname">train</code><span class="sig-paren">(</span><em>G</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/prone.html#ProNE.train"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.prone.ProNE.train" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the module in training mode.</p>
+<p>This has any effect only on certain modules. See documentations of
+particular modules for details of their behaviors in training/evaluation
+mode, if they are affected, e.g. <code class="xref py py-class docutils literal notranslate"><span class="pre">Dropout</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">BatchNorm</span></code>,
+etc.</p>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>Module: self</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-models.emb.sdne">
+<span id="models-emb-sdne-module"></span><h2>models.emb.sdne module<a class="headerlink" href="#module-models.emb.sdne" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="models.emb.sdne.SDNE">
+<em class="property">class </em><code class="descclassname">models.emb.sdne.</code><code class="descname">SDNE</code><span class="sig-paren">(</span><em>hidden_size1</em>, <em>hidden_size2</em>, <em>droput</em>, <em>alpha</em>, <em>beta</em>, <em>nu1</em>, <em>nu2</em>, <em>max_epoch</em>, <em>lr</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/sdne.html#SDNE"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.sdne.SDNE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="models.html#models.base_model.BaseModel" title="models.base_model.BaseModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">models.base_model.BaseModel</span></code></a></p>
+<dl class="staticmethod">
+<dt id="models.emb.sdne.SDNE.add_args">
+<em class="property">static </em><code class="descname">add_args</code><span class="sig-paren">(</span><em>parser</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/sdne.html#SDNE.add_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.sdne.SDNE.add_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add model-specific arguments to the parser.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="models.emb.sdne.SDNE.build_model_from_args">
+<em class="property">classmethod </em><code class="descname">build_model_from_args</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/sdne.html#SDNE.build_model_from_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.sdne.SDNE.build_model_from_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build a new model instance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="models.emb.sdne.SDNE.build_nn">
+<code class="descname">build_nn</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/sdne.html#SDNE.build_nn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.sdne.SDNE.build_nn" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="models.emb.sdne.SDNE.forward">
+<code class="descname">forward</code><span class="sig-paren">(</span><em>adj_mat</em>, <em>l_mat</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/sdne.html#SDNE.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.sdne.SDNE.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="models.emb.sdne.SDNE.get_emb">
+<code class="descname">get_emb</code><span class="sig-paren">(</span><em>adj</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/sdne.html#SDNE.get_emb"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.sdne.SDNE.get_emb" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="models.emb.sdne.SDNE.train">
+<code class="descname">train</code><span class="sig-paren">(</span><em>G</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/sdne.html#SDNE.train"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.sdne.SDNE.train" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the module in training mode.</p>
+<p>This has any effect only on certain modules. See documentations of
+particular modules for details of their behaviors in training/evaluation
+mode, if they are affected, e.g. <code class="xref py py-class docutils literal notranslate"><span class="pre">Dropout</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">BatchNorm</span></code>,
+etc.</p>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>Module: self</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-models.emb.spectral">
+<span id="models-emb-spectral-module"></span><h2>models.emb.spectral module<a class="headerlink" href="#module-models.emb.spectral" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="models.emb.spectral.Spectral">
+<em class="property">class </em><code class="descclassname">models.emb.spectral.</code><code class="descname">Spectral</code><span class="sig-paren">(</span><em>dimension</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/spectral.html#Spectral"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.spectral.Spectral" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="models.html#models.base_model.BaseModel" title="models.base_model.BaseModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">models.base_model.BaseModel</span></code></a></p>
+<dl class="staticmethod">
+<dt id="models.emb.spectral.Spectral.add_args">
+<em class="property">static </em><code class="descname">add_args</code><span class="sig-paren">(</span><em>parser</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/spectral.html#Spectral.add_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.spectral.Spectral.add_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add model-specific arguments to the parser.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="models.emb.spectral.Spectral.build_model_from_args">
+<em class="property">classmethod </em><code class="descname">build_model_from_args</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/spectral.html#Spectral.build_model_from_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.spectral.Spectral.build_model_from_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build a new model instance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="models.emb.spectral.Spectral.train">
+<code class="descname">train</code><span class="sig-paren">(</span><em>G</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/emb/spectral.html#Spectral.train"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.emb.spectral.Spectral.train" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the module in training mode.</p>
+<p>This has any effect only on certain modules. See documentations of
+particular modules for details of their behaviors in training/evaluation
+mode, if they are affected, e.g. <code class="xref py py-class docutils literal notranslate"><span class="pre">Dropout</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">BatchNorm</span></code>,
+etc.</p>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>Module: self</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-models.emb">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-models.emb" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="models.nn.html" class="btn btn-neutral float-right" title="models.nn package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="models.html" class="btn btn-neutral float-left" title="models package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, KEG
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

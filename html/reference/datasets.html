@@ -1,0 +1,543 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>datasets package &mdash; CogDL  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="layers package" href="layers.html" />
+    <link rel="prev" title="data package" href="data.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> CogDL
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="modules.html">cogdl</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="data.html">data package</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">datasets package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-datasets.edgelist_label">datasets.edgelist_label module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-datasets.gatne">datasets.gatne module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-datasets.matlab_matrix">datasets.matlab_matrix module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-datasets.pyg">datasets.pyg module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-datasets">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="layers.html">layers package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="models.html">models package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="options.html">options module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tasks.html">tasks package</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citing.html">Citing</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CogDL</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Reference</a> &raquo;</li>
+        
+          <li><a href="modules.html">cogdl</a> &raquo;</li>
+        
+      <li>datasets package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/reference/datasets.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="datasets-package">
+<h1>datasets package<a class="headerlink" href="#datasets-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-datasets.edgelist_label">
+<span id="datasets-edgelist-label-module"></span><h2>datasets.edgelist_label module<a class="headerlink" href="#module-datasets.edgelist_label" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="datasets.edgelist_label.DBLP">
+<em class="property">class </em><code class="descclassname">datasets.edgelist_label.</code><code class="descname">DBLP</code><a class="reference internal" href="../_modules/datasets/edgelist_label.html#DBLP"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#datasets.edgelist_label.DBLP" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#datasets.edgelist_label.EdgelistLabel" title="datasets.edgelist_label.EdgelistLabel"><code class="xref py py-class docutils literal notranslate"><span class="pre">datasets.edgelist_label.EdgelistLabel</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="datasets.edgelist_label.EdgelistLabel">
+<em class="property">class </em><code class="descclassname">datasets.edgelist_label.</code><code class="descname">EdgelistLabel</code><span class="sig-paren">(</span><em>root</em>, <em>name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/datasets/edgelist_label.html#EdgelistLabel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#datasets.edgelist_label.EdgelistLabel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">cogdl.data.dataset.Dataset</span></code></p>
+<p>networks from the <a class="reference external" href="https://github.com/THUDM/ProNE/raw/master/data">https://github.com/THUDM/ProNE/raw/master/data</a></p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>root (string): Root directory where the dataset should be saved.
+name (string): The name of the dataset (<code class="xref py py-obj docutils literal notranslate"><span class="pre">&quot;Wikipedia&quot;</span></code>).</dd>
+</dl>
+<dl class="method">
+<dt id="datasets.edgelist_label.EdgelistLabel.download">
+<code class="descname">download</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/datasets/edgelist_label.html#EdgelistLabel.download"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#datasets.edgelist_label.EdgelistLabel.download" title="Permalink to this definition">¶</a></dt>
+<dd><p>Downloads the dataset to the <code class="xref py py-obj docutils literal notranslate"><span class="pre">self.raw_dir</span></code> folder.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="datasets.edgelist_label.EdgelistLabel.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>idx</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/datasets/edgelist_label.html#EdgelistLabel.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#datasets.edgelist_label.EdgelistLabel.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the data object at index <code class="xref py py-obj docutils literal notranslate"><span class="pre">idx</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="datasets.edgelist_label.EdgelistLabel.process">
+<code class="descname">process</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/datasets/edgelist_label.html#EdgelistLabel.process"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#datasets.edgelist_label.EdgelistLabel.process" title="Permalink to this definition">¶</a></dt>
+<dd><p>Processes the dataset to the <code class="xref py py-obj docutils literal notranslate"><span class="pre">self.processed_dir</span></code> folder.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="datasets.edgelist_label.EdgelistLabel.processed_file_names">
+<code class="descname">processed_file_names</code><a class="headerlink" href="#datasets.edgelist_label.EdgelistLabel.processed_file_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the files to find in the <code class="xref py py-obj docutils literal notranslate"><span class="pre">self.processed_dir</span></code>
+folder in order to skip the processing.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="datasets.edgelist_label.EdgelistLabel.raw_file_names">
+<code class="descname">raw_file_names</code><a class="headerlink" href="#datasets.edgelist_label.EdgelistLabel.raw_file_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the files to find in the <code class="xref py py-obj docutils literal notranslate"><span class="pre">self.raw_dir</span></code> folder in
+order to skip the download.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="datasets.edgelist_label.EdgelistLabel.url">
+<code class="descname">url</code><em class="property"> = 'https://github.com/THUDM/ProNE/raw/master/data'</em><a class="headerlink" href="#datasets.edgelist_label.EdgelistLabel.url" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="datasets.edgelist_label.read_edgelist_label_data">
+<code class="descclassname">datasets.edgelist_label.</code><code class="descname">read_edgelist_label_data</code><span class="sig-paren">(</span><em>folder</em>, <em>prefix</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/datasets/edgelist_label.html#read_edgelist_label_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#datasets.edgelist_label.read_edgelist_label_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-datasets.gatne">
+<span id="datasets-gatne-module"></span><h2>datasets.gatne module<a class="headerlink" href="#module-datasets.gatne" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="datasets.gatne.AmazonDataset">
+<em class="property">class </em><code class="descclassname">datasets.gatne.</code><code class="descname">AmazonDataset</code><a class="reference internal" href="../_modules/datasets/gatne.html#AmazonDataset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#datasets.gatne.AmazonDataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#datasets.gatne.GatneDataset" title="datasets.gatne.GatneDataset"><code class="xref py py-class docutils literal notranslate"><span class="pre">datasets.gatne.GatneDataset</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="datasets.gatne.GatneDataset">
+<em class="property">class </em><code class="descclassname">datasets.gatne.</code><code class="descname">GatneDataset</code><span class="sig-paren">(</span><em>root</em>, <em>name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/datasets/gatne.html#GatneDataset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#datasets.gatne.GatneDataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">cogdl.data.dataset.Dataset</span></code></p>
+<p>The network datasets “Amazon”, “Twitter” and “YouTube” from the
+<a class="reference external" href="https://arxiv.org/abs/1905.01669">“Representation Learning for Attributed Multiplex Heterogeneous Network”</a> paper.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd><p class="first">root (string): Root directory where the dataset should be saved.
+name (string): The name of the dataset (<code class="xref py py-obj docutils literal notranslate"><span class="pre">&quot;Amazon&quot;</span></code>,</p>
+<blockquote class="last">
+<div><code class="xref py py-obj docutils literal notranslate"><span class="pre">&quot;Twitter&quot;</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">&quot;YouTube&quot;</span></code>).</div></blockquote>
+</dd>
+</dl>
+<dl class="method">
+<dt id="datasets.gatne.GatneDataset.download">
+<code class="descname">download</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/datasets/gatne.html#GatneDataset.download"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#datasets.gatne.GatneDataset.download" title="Permalink to this definition">¶</a></dt>
+<dd><p>Downloads the dataset to the <code class="xref py py-obj docutils literal notranslate"><span class="pre">self.raw_dir</span></code> folder.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="datasets.gatne.GatneDataset.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>idx</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/datasets/gatne.html#GatneDataset.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#datasets.gatne.GatneDataset.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the data object at index <code class="xref py py-obj docutils literal notranslate"><span class="pre">idx</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="datasets.gatne.GatneDataset.process">
+<code class="descname">process</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/datasets/gatne.html#GatneDataset.process"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#datasets.gatne.GatneDataset.process" title="Permalink to this definition">¶</a></dt>
+<dd><p>Processes the dataset to the <code class="xref py py-obj docutils literal notranslate"><span class="pre">self.processed_dir</span></code> folder.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="datasets.gatne.GatneDataset.processed_file_names">
+<code class="descname">processed_file_names</code><a class="headerlink" href="#datasets.gatne.GatneDataset.processed_file_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the files to find in the <code class="xref py py-obj docutils literal notranslate"><span class="pre">self.processed_dir</span></code>
+folder in order to skip the processing.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="datasets.gatne.GatneDataset.raw_file_names">
+<code class="descname">raw_file_names</code><a class="headerlink" href="#datasets.gatne.GatneDataset.raw_file_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the files to find in the <code class="xref py py-obj docutils literal notranslate"><span class="pre">self.raw_dir</span></code> folder in
+order to skip the download.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="datasets.gatne.GatneDataset.url">
+<code class="descname">url</code><em class="property"> = 'https://github.com/THUDM/GATNE/raw/master/data'</em><a class="headerlink" href="#datasets.gatne.GatneDataset.url" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="datasets.gatne.TwitterDataset">
+<em class="property">class </em><code class="descclassname">datasets.gatne.</code><code class="descname">TwitterDataset</code><a class="reference internal" href="../_modules/datasets/gatne.html#TwitterDataset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#datasets.gatne.TwitterDataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#datasets.gatne.GatneDataset" title="datasets.gatne.GatneDataset"><code class="xref py py-class docutils literal notranslate"><span class="pre">datasets.gatne.GatneDataset</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="datasets.gatne.YouTubeDataset">
+<em class="property">class </em><code class="descclassname">datasets.gatne.</code><code class="descname">YouTubeDataset</code><a class="reference internal" href="../_modules/datasets/gatne.html#YouTubeDataset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#datasets.gatne.YouTubeDataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#datasets.gatne.GatneDataset" title="datasets.gatne.GatneDataset"><code class="xref py py-class docutils literal notranslate"><span class="pre">datasets.gatne.GatneDataset</span></code></a></p>
+</dd></dl>
+
+<dl class="function">
+<dt id="datasets.gatne.read_gatne_data">
+<code class="descclassname">datasets.gatne.</code><code class="descname">read_gatne_data</code><span class="sig-paren">(</span><em>folder</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/datasets/gatne.html#read_gatne_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#datasets.gatne.read_gatne_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-datasets.matlab_matrix">
+<span id="datasets-matlab-matrix-module"></span><h2>datasets.matlab_matrix module<a class="headerlink" href="#module-datasets.matlab_matrix" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="datasets.matlab_matrix.BlogcatalogDataset">
+<em class="property">class </em><code class="descclassname">datasets.matlab_matrix.</code><code class="descname">BlogcatalogDataset</code><a class="reference internal" href="../_modules/datasets/matlab_matrix.html#BlogcatalogDataset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#datasets.matlab_matrix.BlogcatalogDataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#datasets.matlab_matrix.MatlabMatrix" title="datasets.matlab_matrix.MatlabMatrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">datasets.matlab_matrix.MatlabMatrix</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="datasets.matlab_matrix.FlickrDataset">
+<em class="property">class </em><code class="descclassname">datasets.matlab_matrix.</code><code class="descname">FlickrDataset</code><a class="reference internal" href="../_modules/datasets/matlab_matrix.html#FlickrDataset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#datasets.matlab_matrix.FlickrDataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#datasets.matlab_matrix.MatlabMatrix" title="datasets.matlab_matrix.MatlabMatrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">datasets.matlab_matrix.MatlabMatrix</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="datasets.matlab_matrix.MatlabMatrix">
+<em class="property">class </em><code class="descclassname">datasets.matlab_matrix.</code><code class="descname">MatlabMatrix</code><span class="sig-paren">(</span><em>root</em>, <em>name</em>, <em>url</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/datasets/matlab_matrix.html#MatlabMatrix"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#datasets.matlab_matrix.MatlabMatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">cogdl.data.dataset.Dataset</span></code></p>
+<p>networks from the <a class="reference external" href="http://leitang.net/code/social-dimension/data/">http://leitang.net/code/social-dimension/data/</a> or <a class="reference external" href="http://snap.stanford.edu/node2vec/">http://snap.stanford.edu/node2vec/</a></p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>root (string): Root directory where the dataset should be saved.
+name (string): The name of the dataset (<code class="xref py py-obj docutils literal notranslate"><span class="pre">&quot;Blogcatalog&quot;</span></code>).</dd>
+</dl>
+<dl class="method">
+<dt id="datasets.matlab_matrix.MatlabMatrix.download">
+<code class="descname">download</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/datasets/matlab_matrix.html#MatlabMatrix.download"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#datasets.matlab_matrix.MatlabMatrix.download" title="Permalink to this definition">¶</a></dt>
+<dd><p>Downloads the dataset to the <code class="xref py py-obj docutils literal notranslate"><span class="pre">self.raw_dir</span></code> folder.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="datasets.matlab_matrix.MatlabMatrix.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>idx</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/datasets/matlab_matrix.html#MatlabMatrix.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#datasets.matlab_matrix.MatlabMatrix.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the data object at index <code class="xref py py-obj docutils literal notranslate"><span class="pre">idx</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="datasets.matlab_matrix.MatlabMatrix.process">
+<code class="descname">process</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/datasets/matlab_matrix.html#MatlabMatrix.process"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#datasets.matlab_matrix.MatlabMatrix.process" title="Permalink to this definition">¶</a></dt>
+<dd><p>Processes the dataset to the <code class="xref py py-obj docutils literal notranslate"><span class="pre">self.processed_dir</span></code> folder.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="datasets.matlab_matrix.MatlabMatrix.processed_file_names">
+<code class="descname">processed_file_names</code><a class="headerlink" href="#datasets.matlab_matrix.MatlabMatrix.processed_file_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the files to find in the <code class="xref py py-obj docutils literal notranslate"><span class="pre">self.processed_dir</span></code>
+folder in order to skip the processing.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="datasets.matlab_matrix.MatlabMatrix.raw_file_names">
+<code class="descname">raw_file_names</code><a class="headerlink" href="#datasets.matlab_matrix.MatlabMatrix.raw_file_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the files to find in the <code class="xref py py-obj docutils literal notranslate"><span class="pre">self.raw_dir</span></code> folder in
+order to skip the download.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="datasets.matlab_matrix.PPIDataset">
+<em class="property">class </em><code class="descclassname">datasets.matlab_matrix.</code><code class="descname">PPIDataset</code><a class="reference internal" href="../_modules/datasets/matlab_matrix.html#PPIDataset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#datasets.matlab_matrix.PPIDataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#datasets.matlab_matrix.MatlabMatrix" title="datasets.matlab_matrix.MatlabMatrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">datasets.matlab_matrix.MatlabMatrix</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="datasets.matlab_matrix.WikipediaDataset">
+<em class="property">class </em><code class="descclassname">datasets.matlab_matrix.</code><code class="descname">WikipediaDataset</code><a class="reference internal" href="../_modules/datasets/matlab_matrix.html#WikipediaDataset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#datasets.matlab_matrix.WikipediaDataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#datasets.matlab_matrix.MatlabMatrix" title="datasets.matlab_matrix.MatlabMatrix"><code class="xref py py-class docutils literal notranslate"><span class="pre">datasets.matlab_matrix.MatlabMatrix</span></code></a></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-datasets.pyg">
+<span id="datasets-pyg-module"></span><h2>datasets.pyg module<a class="headerlink" href="#module-datasets.pyg" title="Permalink to this headline">¶</a></h2>
+<p>bool(x) -&gt; bool</p>
+<p>Returns True when the argument x is true, False otherwise.
+The builtins True and False are the only two instances of the class bool.
+The class bool is a subclass of the class int, and cannot be subclassed.</p>
+<dl class="function">
+<dt id="datasets.pyg.bit_length">
+<code class="descclassname">datasets.pyg.</code><code class="descname">bit_length</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#datasets.pyg.bit_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of bits necessary to represent self in binary.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">bin</span><span class="p">(</span><span class="mi">37</span><span class="p">)</span>
+<span class="go">&#39;0b100101&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="mi">37</span><span class="p">)</span><span class="o">.</span><span class="n">bit_length</span><span class="p">()</span>
+<span class="go">6</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="datasets.pyg.conjugate">
+<code class="descclassname">datasets.pyg.</code><code class="descname">conjugate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#datasets.pyg.conjugate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns self, the complex conjugate of any int.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="datasets.pyg.from_bytes">
+<code class="descclassname">datasets.pyg.</code><code class="descname">from_bytes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#datasets.pyg.from_bytes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the integer represented by the given array of bytes.</p>
+<dl class="docutils">
+<dt>bytes</dt>
+<dd>Holds the array of bytes to convert.  The argument must either
+support the buffer protocol or be an iterable object producing bytes.
+Bytes and bytearray are examples of built-in objects that support the
+buffer protocol.</dd>
+<dt>byteorder</dt>
+<dd>The byte order used to represent the integer.  If byteorder is ‘big’,
+the most significant byte is at the beginning of the byte array.  If
+byteorder is ‘little’, the most significant byte is at the end of the
+byte array.  To request the native byte order of the host system, use
+<a href="#id1"><span class="problematic" id="id2">`</span></a>sys.byteorder’ as the byte order value.</dd>
+<dt>signed</dt>
+<dd>Indicates whether two’s complement is used to represent the integer.</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="datasets.pyg.to_bytes">
+<code class="descclassname">datasets.pyg.</code><code class="descname">to_bytes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#datasets.pyg.to_bytes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return an array of bytes representing an integer.</p>
+<dl class="docutils">
+<dt>length</dt>
+<dd>Length of bytes object to use.  An OverflowError is raised if the
+integer is not representable with the given number of bytes.</dd>
+<dt>byteorder</dt>
+<dd>The byte order used to represent the integer.  If byteorder is ‘big’,
+the most significant byte is at the beginning of the byte array.  If
+byteorder is ‘little’, the most significant byte is at the end of the
+byte array.  To request the native byte order of the host system, use
+<a href="#id3"><span class="problematic" id="id4">`</span></a>sys.byteorder’ as the byte order value.</dd>
+<dt>signed</dt>
+<dd>Determines whether two’s complement is used to represent the integer.
+If signed is False and a negative integer is given, an OverflowError
+is raised.</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-datasets">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-datasets" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="datasets.build_dataset">
+<code class="descclassname">datasets.</code><code class="descname">build_dataset</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/datasets.html#build_dataset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#datasets.build_dataset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="datasets.build_dataset_from_name">
+<code class="descclassname">datasets.</code><code class="descname">build_dataset_from_name</code><span class="sig-paren">(</span><em>dataset</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/datasets.html#build_dataset_from_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#datasets.build_dataset_from_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="datasets.register_dataset">
+<code class="descclassname">datasets.</code><code class="descname">register_dataset</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/datasets.html#register_dataset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#datasets.register_dataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>New dataset types can be added to cogdl with the <a class="reference internal" href="#datasets.register_dataset" title="datasets.register_dataset"><code class="xref py py-func docutils literal notranslate"><span class="pre">register_dataset()</span></code></a>
+function decorator.</p>
+<p>For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@register_dataset</span><span class="p">(</span><span class="s1">&#39;my_dataset&#39;</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">MyDataset</span><span class="p">():</span>
+    <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>name (str): the name of the dataset</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="layers.html" class="btn btn-neutral float-right" title="layers package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="data.html" class="btn btn-neutral float-left" title="data package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, KEG
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

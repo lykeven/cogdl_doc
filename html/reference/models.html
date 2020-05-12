@@ -1,0 +1,328 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>models package &mdash; CogDL  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="models.emb package" href="models.emb.html" />
+    <link rel="prev" title="layers package" href="layers.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> CogDL
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="modules.html">cogdl</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="data.html">data package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="datasets.html">datasets package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="layers.html">layers package</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">models package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-models.base_model">models.base_model module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-models">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="options.html">options module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tasks.html">tasks package</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citing.html">Citing</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CogDL</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Reference</a> &raquo;</li>
+        
+          <li><a href="modules.html">cogdl</a> &raquo;</li>
+        
+      <li>models package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/reference/models.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="models-package">
+<h1>models package<a class="headerlink" href="#models-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="models.emb.html">models.emb package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="models.emb.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models.emb.html#module-models.emb.deepwalk">models.emb.deepwalk module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models.emb.html#module-models.emb.dngr">models.emb.dngr module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models.emb.html#module-models.emb.gatne">models.emb.gatne module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models.emb.html#module-models.emb.grarep">models.emb.grarep module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models.emb.html#module-models.emb.hope">models.emb.hope module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models.emb.html#module-models.emb.line">models.emb.line module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models.emb.html#module-models.emb.netmf">models.emb.netmf module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models.emb.html#module-models.emb.netsmf">models.emb.netsmf module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models.emb.html#module-models.emb.node2vec">models.emb.node2vec module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models.emb.html#module-models.emb.prone">models.emb.prone module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models.emb.html#module-models.emb.sdne">models.emb.sdne module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models.emb.html#module-models.emb.spectral">models.emb.spectral module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models.emb.html#module-models.emb">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="models.nn.html">models.nn package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="models.nn.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models.nn.html#module-models.nn.gat">models.nn.gat module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models.nn.html#module-models.nn.gcn">models.nn.gcn module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models.nn.html#module-models.nn.graphsage">models.nn.graphsage module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models.nn.html#module-models.nn.mlp">models.nn.mlp module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models.nn.html#models-nn-pyg-drgat-module">models.nn.pyg_drgat module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models.nn.html#models-nn-pyg-drgcn-module">models.nn.pyg_drgcn module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models.nn.html#models-nn-pyg-gat-module">models.nn.pyg_gat module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models.nn.html#models-nn-pyg-gcn-module">models.nn.pyg_gcn module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models.nn.html#module-models.nn">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-models.base_model">
+<span id="models-base-model-module"></span><h2>models.base_model module<a class="headerlink" href="#module-models.base_model" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="models.base_model.BaseModel">
+<em class="property">class </em><code class="descclassname">models.base_model.</code><code class="descname">BaseModel</code><a class="reference internal" href="../_modules/models/base_model.html#BaseModel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.base_model.BaseModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="staticmethod">
+<dt id="models.base_model.BaseModel.add_args">
+<em class="property">static </em><code class="descname">add_args</code><span class="sig-paren">(</span><em>parser</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/base_model.html#BaseModel.add_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.base_model.BaseModel.add_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add model-specific arguments to the parser.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="models.base_model.BaseModel.build_model_from_args">
+<em class="property">classmethod </em><code class="descname">build_model_from_args</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models/base_model.html#BaseModel.build_model_from_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.base_model.BaseModel.build_model_from_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build a new model instance.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-models">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-models" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="models.alias_draw">
+<code class="descclassname">models.</code><code class="descname">alias_draw</code><span class="sig-paren">(</span><em>J</em>, <em>q</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models.html#alias_draw"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.alias_draw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw sample from a non-uniform discrete distribution using alias sampling.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="models.alias_setup">
+<code class="descclassname">models.</code><code class="descname">alias_setup</code><span class="sig-paren">(</span><em>probs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models.html#alias_setup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.alias_setup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute utility lists for non-uniform sampling from discrete distributions.
+Refer to <a class="reference external" href="https://hips.seas.harvard.edu/blog/2013/03/03/the-alias-method-efficient-sampling-with-many-discrete-outcomes/">https://hips.seas.harvard.edu/blog/2013/03/03/the-alias-method-efficient-sampling-with-many-discrete-outcomes/</a>
+for details</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="models.build_model">
+<code class="descclassname">models.</code><code class="descname">build_model</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models.html#build_model"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.build_model" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="models.register_model">
+<code class="descclassname">models.</code><code class="descname">register_model</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/models.html#register_model"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#models.register_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>New model types can be added to cogdl with the <a class="reference internal" href="#models.register_model" title="models.register_model"><code class="xref py py-func docutils literal notranslate"><span class="pre">register_model()</span></code></a>
+function decorator.</p>
+<p>For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@register_model</span><span class="p">(</span><span class="s1">&#39;gat&#39;</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">GAT</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>name (str): the name of the model</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="models.emb.html" class="btn btn-neutral float-right" title="models.emb package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="layers.html" class="btn btn-neutral float-left" title="layers package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, KEG
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
